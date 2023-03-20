@@ -1,0 +1,46 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #9356DC;
+    --secondary-color: #FF79DA;
+    --tertiary-color: #99E2D0;
+}
+
+html {
+    font-size: 62.5%;   /* equivalent of 10px on the root element */
+}
+
+body {
+    font-family: "roboto", sans-serif;
+    font-size: 1.6em;  /* base size for all elements 16px equivalent */
+    font-weight: 500;
+    margin: 0;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 640px;
+}
+
+.header {
+    font-family: "shrikhand", cursive;
+    font-weight: 400;
+    font-size: 3rem;
+    text-align: center;
+    min-height: 63px;
+    box-shadow: 0px 2px 4px 0px #00000026;
+}
+
+.header p {
+    margin: 0;
+    padding-top: 0.5em;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
