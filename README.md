@@ -62,3 +62,6 @@
   Chrome et Firefox.
 ● Le développement doit se faire en CSS, sans JavaScript.
 ● Aucun framework ne devra être utilisé
+
+# GitHub Pages
+https://temo-accipiter.github.io/ohmyfood/ 
