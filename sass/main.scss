@@ -28,17 +28,15 @@ body {
 
 .header {
     font-family: "shrikhand", cursive;
-    font-weight: 400;
-    font-size: 3rem;
+    font-size: 1.5rem;
     position: relative; /* to show shadow */
     text-align: center;
-    min-height: 63px;
     box-shadow: 0px 2px 4px 0px #00000026;
 }
 
-.header p {
+h1 {
+    padding: 0.4em;
     margin: 0;
-    padding-top: 0.5em;
 }
 
 a {
@@ -51,8 +49,37 @@ a {
     align-items: center;
     justify-content: center;
     min-height: 50px;
-    column-gap: 17px;
-    font-family: "roboto", sans-serif;
+    gap: 17px;
     color: #353535;
     background-color: #EAEAEA;
 }
+
+.title {
+    text-align: center;
+    min-height: 300px;
+    padding: 4rem 0 6rem 0;
+    background-color: #D2D2D2;
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.title p {
+    font-size: 1.8rem;
+    color: #353535;
+    font-weight: 300;
+}
+
+.title button {
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    width: 218px;
+    height: 50px;
+    border: transparent;
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px 0px #00000040;
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
+
