@@ -14,6 +14,11 @@ html {
   font-size: 62.5%; /* equivalent of 10px on the root element */
 }
 
+.main-container {
+  width: 100%;
+  max-width: 640px;
+}
+
 body {
   font-family: "roboto", sans-serif;
   font-size: 1.6em; /* base size for all elements 16px equivalent */
@@ -21,17 +26,9 @@ body {
   margin: 0;
 }
 
-.main-container {
-  width: 100%;
-  max-width: 640px;
-}
-
-.header {
-  font-family: "shrikhand", cursive;
-  font-size: 1.5rem;
-  position: relative; /* to show shadow */
-  text-align: center;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+a {
+  text-decoration: none;
+  color: #000000;
 }
 
 h1 {
@@ -39,9 +36,36 @@ h1 {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
-  color: #000000;
+h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.title {
+  text-align: center;
+  min-height: 300px;
+  padding: 4rem 0 6rem 0;
+  background-color: #D2D2D2;
+}
+.title__text {
+  font-size: 1.8rem;
+  color: #353535;
+  font-weight: 300;
+}
+.title__button {
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  width: 218px;
+  height: 50px;
+  border: transparent;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  transition: transform 300ms;
+}
+.title__button:hover {
+  transform: scale(1.01);
+  opacity: 0.9;
 }
 
 .location {
@@ -54,33 +78,42 @@ a {
   background-color: #EAEAEA;
 }
 
-.title {
+.header {
+  font-family: "shrikhand", cursive;
+  font-size: 1.5rem;
+  position: relative; /* to show shadow */
   text-align: center;
-  min-height: 300px;
-  padding: 4rem 0 6rem 0;
-  background-color: #D2D2D2;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
 }
 
-h2 {
-  font-size: 2.4rem;
-  font-weight: 700;
+.nav {
+  min-height: 440px;
+  /*padding: 5rem 2rem 7rem 2rem;*/
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
-
-.title p {
-  font-size: 1.8rem;
-  color: #353535;
-  font-weight: 300;
+.nav__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 266px;
 }
-
-.title button {
-  font-size: 1.6rem;
-  color: #FFFFFF;
-  width: 218px;
-  height: 50px;
-  border: transparent;
-  border-radius: 25px;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+.nav__element {
+  display: flex;
+  background-color: #F6F6F6;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  border-radius: 20px;
+  padding: 2.8rem 0 2.8rem 3.5rem;
+}
+.nav__element .picto {
+  color: #7E7E7E;
+  margin-right: 2rem;
+}
+.nav__element .fa-mobile-screen-button {
+  margin-right: 2.7rem;
+}
+.nav__element .fa-list-ul {
+  margin-right: 2.3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
