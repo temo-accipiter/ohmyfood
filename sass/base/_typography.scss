@@ -1,9 +1,13 @@
+@use "../utils/variables" as v;
+
 body {
+    display: flex;
+    justify-content: center;
     font-family: "roboto", sans-serif;
     font-size: 1.6em;  /* base size for all elements 16px equivalent */
     font-weight: 500;
     margin: 0;
-    background-color: $background-color;
+    background-color: v.$background-color;
 }
 
 a {
