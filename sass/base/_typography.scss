@@ -3,6 +3,7 @@ body {
     font-size: 1.6em;  /* base size for all elements 16px equivalent */
     font-weight: 500;
     margin: 0;
+    background-color: $background-color;
 }
 
 a {
@@ -17,5 +18,10 @@ h1 {
 
 h2 {
     font-size: 2.4rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.8rem;
     font-weight: 700;
 }

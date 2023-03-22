@@ -1,0 +1,26 @@
+.footer {
+    background-color:#353535;
+    color: #FFFFFF;
+    padding: 1rem 0 3rem 2.5rem;
+    &__title {
+        font-family: "shrikhand";
+        font-size: 1.8rem;
+    }
+    & a {
+        color: #FFFFFF;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    &__content :nth-child(3) {
+        font-weight: 400;
+    }
+    &__content :nth-child(4) {
+        font-weight: 400;
+    }
+    &__icon {
+        margin-right: 0.7rem;
+    }
+}

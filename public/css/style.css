@@ -24,6 +24,7 @@ body {
   font-size: 1.6em; /* base size for all elements 16px equivalent */
   font-weight: 500;
   margin: 0;
+  background-color: #D2D2D2;
 }
 
 a {
@@ -41,11 +42,15 @@ h2 {
   font-weight: 700;
 }
 
+h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
 .title {
   text-align: center;
   min-height: 300px;
   padding: 4rem 0 6rem 0;
-  background-color: #D2D2D2;
 }
 .title__text {
   font-size: 1.8rem;
@@ -87,33 +92,102 @@ h2 {
 }
 
 .nav {
-  min-height: 440px;
-  /*padding: 5rem 2rem 7rem 2rem;*/
+  background-color: #FFFFFF;
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+}
+.nav__title {
   padding-left: 2rem;
+}
+.nav__list {
+  counter-reset: liste;
+  list-style: none;
+  padding-left: 3rem;
   padding-right: 2rem;
 }
-.nav__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 266px;
-}
 .nav__element {
-  display: flex;
   background-color: #F6F6F6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
   border-radius: 20px;
-  padding: 2.8rem 0 2.8rem 3.5rem;
+  padding-top: 2.6rem;
+  padding-bottom: 2.6rem;
+  margin-bottom: 2rem;
+  position: relative;
 }
-.nav__element .picto {
+.nav__element::before {
+  counter-increment: liste 1;
+  content: counter(liste) " ";
+  background-color: #9356DC;
+  padding: 0.1rem 0.6rem;
+  border-radius: 20px;
+  color: #FFFFFF;
+  position: absolute;
+  left: -1rem;
+}
+.nav__icon {
   color: #7E7E7E;
+  margin-left: 3.4rem;
   margin-right: 2rem;
 }
-.nav__element .fa-mobile-screen-button {
-  margin-right: 2.7rem;
+
+.cards {
+  padding: 5.5rem 2rem 6.5rem 2rem;
 }
-.nav__element .fa-list-ul {
-  margin-right: 2.3rem;
+.cards .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 251px;
+  margin-bottom: 2rem;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 15px 0px hsba(0, 0%, 0%, 0.1);
+  border-radius: 15px;
+}
+.cards .card img {
+  width: 100%;
+  height: 174px;
+  border-radius: 15px 15px 0 0;
+}
+.cards .card__content {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 0 1.2rem 1.3rem;
+}
+.cards .card__title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.cards .card__subtitle {
+  font-size: 1.7rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.footer {
+  background-color: #353535;
+  color: #FFFFFF;
+  padding: 1rem 0 3rem 2.5rem;
+}
+.footer__title {
+  font-family: "shrikhand";
+  font-size: 1.8rem;
+}
+.footer a {
+  color: #FFFFFF;
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer__content :nth-child(3) {
+  font-weight: 400;
+}
+.footer__content :nth-child(4) {
+  font-weight: 400;
+}
+.footer__icon {
+  margin-right: 0.7rem;
 }
 
 /*# sourceMappingURL=style.css.map */

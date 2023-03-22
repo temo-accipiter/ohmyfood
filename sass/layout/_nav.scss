@@ -1,29 +1,37 @@
 .nav {
-    min-height: 440px;
-    /*padding: 5rem 2rem 7rem 2rem;*/
-    padding-left: 2rem;
-    padding-right: 2rem;
-    &__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 266px;
+    background-color: #FFFFFF;
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+    &__title {padding-left: 2rem;
+    }
+    &__list {
+        counter-reset: liste;
+        list-style: none;
+        padding-left: 3rem;
+        padding-right: 2rem;
     }
     &__element {
-        display: flex;
         background-color: #F6F6F6;
         box-shadow: 0px 4px 15px 0px #00000026;
         border-radius: 20px;
-        padding: 2.8rem 0 2.8rem 3.5rem;
-        & .picto {
-            color: #7E7E7E;
-            margin-right: 2rem;
+        padding-top: 2.6rem;
+        padding-bottom: 2.6rem;
+        margin-bottom: 2rem;
+        position: relative;
+        &::before {
+            counter-increment: liste 1;
+            content: counter(liste) " ";
+            background-color: $primary-color;
+            padding: 0.1rem 0.6rem;
+            border-radius: 20px;
+            color: #FFFFFF;
+            position: absolute;
+            left: -1rem;
         }
-        & .fa-mobile-screen-button {
-            margin-right: 2.7rem;
-        }
-        & .fa-list-ul {
-            margin-right: 2.3rem;
-        }
+    }
+    &__icon {
+        color: #7E7E7E;
+        margin-left: 3.4rem;
+        margin-right: 2rem;
     }
 }
