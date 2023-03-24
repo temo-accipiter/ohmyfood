@@ -1,9 +1,26 @@
+@use "../utils/variables" as v;
+
 .cards {
+    display: flex;
+    flex-direction: column;
+    background-color: v.$background-color;
     padding: 5.5rem 2rem 6.5rem 2rem;
+    &__container {
+        @media (min-width: v.$breakpoint-tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+    }
+    &__link {
+        display: block;
+        @media (min-width: v.$breakpoint-tablet) {
+            flex-basis: 48%;
+            }
+        }
     & .card {
         display: flex;
         flex-direction: column;
-        width: 100%;
         height: 251px;
         margin-bottom: 2rem;
         background-color: #FFFFFF;
@@ -29,6 +46,7 @@
             width: 100%;
             height: 174px;
             border-radius: 15px 15px 0 0;
+            object-fit: cover;
         }
         &__content {
             display: flex;
@@ -40,7 +58,8 @@
                 font-family: "Font Awesome 5 Free";
                 position: absolute;
                 font-size: 2rem;
-                font-weight: 900;
+                font-weight: 500;
+                color: #101010;
                 right: 2rem;
                 top: 2rem;
             }

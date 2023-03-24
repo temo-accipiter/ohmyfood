@@ -1,18 +1,38 @@
+@use "../utils/variables" as v;
+
 .footer {
     background-color:#353535;
     color: #FFFFFF;
     padding: 1rem 0 3rem 2.5rem;
+    @media (min-width: v.$breakpoint-desktop) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10rem;
+    }
     &__title {
         font-family: "shrikhand";
         font-size: 1.8rem;
+        @media (min-width: v.$breakpoint-desktop) {
+            order: 2;
+        }
     }
-    & a {
+    &__link {
         color: #FFFFFF;
     }
     &__content {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+        @media (min-width: v.$breakpoint-tablet) {
+            flex-direction: row;
+            justify-content: space-between;
+            padding-right: 2rem;
+        }
+        @media (min-width: v.$breakpoint-desktop) {
+            gap: 5rem;
+            order: 1;
+        }
     }
     &__content :nth-child(3) {
         font-weight: 400;
