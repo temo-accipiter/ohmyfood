@@ -6,9 +6,10 @@
     padding: 1rem 0 3rem 2.5rem;
     @media (min-width: v.$breakpoint-desktop) {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
-        gap: 10rem;
+        gap: 7rem;
+        padding: 3rem 5rem 1rem 0;
     }
     &__title {
         font-family: "shrikhand";
@@ -30,7 +31,7 @@
             padding-right: 2rem;
         }
         @media (min-width: v.$breakpoint-desktop) {
-            gap: 5rem;
+            gap: 3rem;
             order: 1;
         }
     }

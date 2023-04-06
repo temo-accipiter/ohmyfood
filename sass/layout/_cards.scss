@@ -1,15 +1,27 @@
 @use "../utils/variables" as v;
 
+.k {
+    background-color: v.$background-color;
+    padding: 5.5rem 2rem 6.5rem 2rem;
+        @media (min-width: v.$breakpoint-desktop) {
+            padding: 3rem 2rem 3rem 2rem;
+        }
+}
 .cards {
     display: flex;
     flex-direction: column;
-    background-color: v.$background-color;
-    padding: 5.5rem 2rem 6.5rem 2rem;
+    margin: auto;
+        @media (min-width: v.$breakpoint-desktop) {
+            max-width: 1100px;
+            padding: 0;
+        }
     &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
         @media (min-width: v.$breakpoint-tablet) {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
+            flex-flow: row wrap;
+            justify-content: space-between;
         }
     }
     &__link {
@@ -21,8 +33,8 @@
     & .card {
         display: flex;
         flex-direction: column;
+        max-width: 490px;
         height: 251px;
-        margin-bottom: 2rem;
         background-color: #FFFFFF;
         box-shadow: 0px 4px 15px 0px #0000001A;
         border-radius: 15px;
