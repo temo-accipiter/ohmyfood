@@ -13,87 +13,83 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.img_menu {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 275px;
-    & img {
+    &__img {
+        position: absolute;
+        z-index: -1;
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: 275px;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 22rem;
+        background-color: #F6F6F6;
+        border-radius: 30px 30px 0 0;
+        padding: 1.3rem;
+        gap: 4rem;
+        width: 100%;
+        max-width: 1055px;
+            &__title {
+            padding: 1.9rem 0.4rem 0 0.4rem;
+            position: relative;
+            margin-left: -5rem;
+            &::after {
+                content: "\f004";
+                font-family: "Font Awesome 5 Free";
+                position: absolute;
+                font-size: 2rem;
+                font-weight: 500;
+                color: #101010;
+                right: -4rem;
+                top: 3rem;
+            }
+        }    
     }
 }
 
 .menu {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 22rem;
-    background-color: #F6F6F6;
-    border-radius: 30px 30px 0 0;
-    padding: 1.3rem;
-    gap: 4rem;
+    gap: 1.2rem;
     width: 100%;
-    max-width: 1055px;
-        &_title {
-        padding: 1.9rem 0.4rem 0 0.4rem;
-        position: relative;
-        margin-left: -5rem;
+    max-width: 634px;
+    &__title {
+        padding-bottom: 1rem;
         &::after {
-            content: "\f004";
-            font-family: "Font Awesome 5 Free";
-            position: absolute;
-            font-size: 2rem;
-            font-weight: 500;
-            color: #101010;
-            right: -4rem;
-            top: 3rem;
+            content: "";
+            display: block;
+            height: 1rem;
+            border-bottom: 3px solid #99E2D0;
+            width: 4rem;
         }
     }
-    &_entree {
+    &__card {
         display: flex;
         flex-direction: column;
-        gap: 1.2rem;
-        width: 100%;
-        max-width: 634px;
+        height: 69px;
+        padding: 1.2rem 1.5rem;
+        gap: 0.5rem;
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px 0px #0000001A;
+        &__title {
+            font-weight: 500;
+        }
+        &__content {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__tarif {
+            font-weight: 700;
+            color: #353535;
+        }
     }
-}
-
-.menu_entree_title {
-    padding-bottom: 1rem;
-}
-
-.underlined {
-    text-decoration: underline;
-    text-underline-offset: 1rem;
-    text-decoration-color: #99E2D0;
-    text-decoration-thickness: 3px;
-}
-
-.menu_entree_card {
-    display: flex;
-    flex-direction: column;
-    height: 69px;
-    padding: 1.2rem 1.5rem;
-    gap: 0.5rem;
-    background-color: #FFFFFF;
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px 0px #0000001A;
-    &_title {
-        font-weight: 500;
-    }
-    &_content {
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
-.tarif {
-    font-weight: 700;
-    color: #353535;
 }
 
 .cmd__btn {

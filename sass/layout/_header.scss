@@ -5,12 +5,12 @@
     box-shadow: 0px 2px 4px 0px #00000026;
 }
 
-.header_menu {
+.header__menu {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 0.3em;
-    position: relative;
+    justify-content: space-between;
+    padding: 0.3em 0.3em 0.3em 1em;
+    /*position: relative;
     &::before {
         font-family: "Font Awesome 5 Free"; 
         font-size: 2rem;
@@ -18,5 +18,15 @@
         content: "\f060";
         position: absolute;
         left: 1.5rem;
-    }
+    }*/
+}
+  
+.header__title {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+.fa-arrow-left {
+    font-weight: 600;
+    font-size: 2rem;
 }

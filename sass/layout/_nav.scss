@@ -1,9 +1,5 @@
 @use "../utils/variables" as v;
 
-.g {
-    background-color: #FFFFFF;
-    padding: 5rem 2rem 7rem 2rem;
-}
 .nav {
     display: flex;
     flex-direction: column;
@@ -11,6 +7,9 @@
         max-width: 1100px;
         margin: auto;
         padding-left: 0;
+    }
+    &__container {
+        padding: 5rem 2rem 7rem 2rem;
     }
     &__list {
         counter-reset: liste;
