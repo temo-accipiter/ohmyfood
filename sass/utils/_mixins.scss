@@ -1,0 +1,5 @@
+@use "../utils/variables" as v;
+
+@mixin shadow ($size: v.$shadow-size, $color: v.$shadow-color) {
+    box-shadow: $size $color;
+}

@@ -1,9 +1,10 @@
 @use "../utils/variables" as v;
+@use "../utils/mixins";
 
 .nav {
     display: flex;
     flex-direction: column;
-    @media (min-width: v.$breakpoint-desktop) {
+    @media (min-width: v.$desktop) {
         max-width: 1100px;
         margin: auto;
         padding-left: 0;
@@ -18,14 +19,14 @@
         flex-direction: column;
         gap: 2.5rem;
         padding-left: 1rem;
-        @media (min-width: v.$breakpoint-desktop) {
+        @media (min-width: v.$desktop) {
             flex-direction: row;
         }
     }
     &__element {
-        background-color: #F6F6F6;
-        box-shadow: 0px 4px 15px 0px #00000026;
-        border-radius: 20px;
+        background-color: v.$bg-color;
+        @include mixins.shadow (v.$shadow-color2);
+        border-radius: map-get(v.$border, small);
         padding-top: 2.6rem;
         padding-bottom: 2.6rem;
         position: relative;
@@ -33,13 +34,13 @@
             counter-increment: liste 1;
             content: counter(liste) " ";
             background-color: v.$primary-color;
-            padding: 0.1rem 0.6rem;
-            border-radius: 20px;
+            padding: .1rem .6rem;
+            border-radius: map-get(v.$border, small);
             color: #FFFFFF;
             position: absolute;
             left: -1rem;   
         }
-        @media (min-width: v.$breakpoint-desktop) {
+        @media (min-width: v.$desktop) {
             width: 322px;
         }
     }

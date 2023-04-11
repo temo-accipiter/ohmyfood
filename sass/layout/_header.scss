@@ -1,15 +1,18 @@
+@use "../utils/variables" as v;
+@use "../utils/mixins";
+
 .header {
-    padding: 0.3em;
+    padding: .3em;
     text-align: center;
     position: relative; /* to show shadow */
-    box-shadow: 0px 2px 4px 0px #00000026;
+    @include mixins.shadow (v.$shadow-size2, v.$shadow-color2);
 }
 
 .header__menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.3em 0.3em 0.3em 1em;
+    padding: .3em .3em .3em 1em;
     /*position: relative;
     &::before {
         font-family: "Font Awesome 5 Free"; 

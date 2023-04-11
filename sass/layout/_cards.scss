@@ -1,43 +1,44 @@
 @use "../utils/variables" as v;
+@use "../utils/mixins";
 
 .cards {
     display: flex;
     flex-direction: column;
     margin: auto;
-        @media (min-width: v.$breakpoint-desktop) {
+        @media (min-width: v.$desktop) {
             max-width: 1100px;
             padding: 0;
         }
     &__container {
-        background-color: v.$background-color;
+        background-color: v.$bg-color;
         padding: 5.5rem 2rem 6.5rem 2rem;
-        @media (min-width: v.$breakpoint-desktop) {
-            spadding: 3rem 2rem 3rem 2rem;
+        @media (min-width: v.$desktop) {
+            padding: 3rem 2rem;
         }
     }
     &__elements {
         display: flex;
         flex-direction: column;
         gap: 3rem;
-        @media (min-width: v.$breakpoint-tablet) {
+        @media (min-width: v.$medium) {
             flex-flow: row wrap;
             justify-content: space-between;
         }
     }
     &__link {
         display: block;
-        @media (min-width: v.$breakpoint-tablet) {
-            flex-basis: 48%;
+        @media (min-width: v.$medium) {
+            flex-basis: 47%;
             }
         }
     & .card {
         display: flex;
         flex-direction: column;
-        max-width: 490px;
+        max-width: 689px;
         height: 251px;
         background-color: #FFFFFF;
-        box-shadow: 0px 4px 15px 0px #0000001A;
-        border-radius: 15px;
+        @include mixins.shadow;
+        border-radius: map-get(v.$border, small);
         position: relative;
         &__badge::before {
             content: "Nouveau";
@@ -47,17 +48,18 @@
             padding-top: .6rem;
             position: absolute;
             background-color: #99E2D0;
-            box-shadow: 0px 2px 4px 0px #00000026;
+            @include mixins.shadow (v.$shadow-size2, v.$shadow-color2);
             height: 29px;
             width: 80px;
             top: 1.5rem;
             right: 1.5rem;
-            border-radius: 2px;
+            border-radius: map-get(v.$border, tiny);
         }
         & img {
             width: 100%;
             height: 174px;
-            border-radius: 15px 15px 0 0;
+            /*border-radius: 15px 15px 0 0;*/
+            border-radius: map-get(v.$border, mixed);
             object-fit: cover;
         }
         &__content {
