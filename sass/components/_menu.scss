@@ -9,33 +9,11 @@
     max-width: 634px;
     &__title {
         padding-bottom: 1rem;
-        &::after {
-            content: "";
-            display: block;
-            height: 1rem;
-            border-bottom: 3px solid v.$tertiary-color;
-            width: 4rem;
+        &::after {           /* green underline */
+           @include mixins.underline;
         }
     }
     &__card {
-        display: flex;
-        flex-direction: column;
-        height: 69px;
-        padding: 1.2rem 1.5rem;
-        gap: 0.5rem;
-        background-color: #FFFFFF;
-        border-radius: map-get(v.$border, small);
-        @include mixins.shadow;
-        &__title {
-            font-weight: 500;
-        }
-        &__content {
-            display: flex;
-            justify-content: space-between;
-        }
-        &__tarif {
-            font-weight: 700;
-            color: #353535;
-        }
+        @include mixins.menu;
     }
 }

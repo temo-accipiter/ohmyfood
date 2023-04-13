@@ -2,16 +2,8 @@
 @use "../utils/mixins";
 
 .explore__btn {
-    font-size: 1.6rem;
-    color: #FFFFFF;
-    width: 218px;
-    height: 50px;
-    margin-top: 2.7rem;
-    border: transparent;
-    border-radius: map-get(v.$border, large);
+    @include mixins.button;
     @include mixins.shadow;
-    background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-    transition: transform 300ms;
     &:hover {
         transform: scale(1.01);
         opacity: 0.9;

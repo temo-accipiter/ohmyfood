@@ -1,3 +1,5 @@
+@use "../utils/mixins";
+
 .sections {
     position: relative;
     display: flex;
@@ -29,13 +31,8 @@
             padding: 1.9rem 0.4rem 0 0.4rem;
             position: relative;
             margin-left: -5rem;
-            &::after {
-                content: "\f004";
-                font-family: "Font Awesome 5 Free";
-                position: absolute;
-                font-size: 2rem;
-                font-weight: 500;
-                color: #101010;
+            &::after {         /* heart icon */
+                @include mixins.icon__heart;
                 right: -4rem;
                 top: 3rem;
             }

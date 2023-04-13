@@ -25,20 +25,13 @@
     }
     &__element {
         background-color: v.$bg-color;
-        @include mixins.shadow (v.$shadow-color2);
+        @include mixins.shadow (v.$shadow-size2, v.$shadow-color2);
         border-radius: map-get(v.$border, small);
         padding-top: 2.6rem;
         padding-bottom: 2.6rem;
         position: relative;
         &::before {
-            counter-increment: liste 1;
-            content: counter(liste) " ";
-            background-color: v.$primary-color;
-            padding: .1rem .6rem;
-            border-radius: map-get(v.$border, small);
-            color: #FFFFFF;
-            position: absolute;
-            left: -1rem;   
+            @include mixins.incrementation;  
         }
         @media (min-width: v.$desktop) {
             width: 322px;
