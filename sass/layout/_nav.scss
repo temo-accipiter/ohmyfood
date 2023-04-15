@@ -25,8 +25,8 @@
     }
     &__element {
         background-color: v.$bg-color;
-        @include mixins.shadow (v.$shadow-size2, v.$shadow-color2);
-        border-radius: map-get(v.$border, small);
+        @include mixins.shadow (0px 2px 4px 0px, v.$shadow-color, 0.15);
+        border-radius: map-get(v.$border, default)-5px;
         padding-top: 2.6rem;
         padding-bottom: 2.6rem;
         position: relative;

@@ -80,7 +80,7 @@ p {
   border-radius: 25px;
   background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   transition: transform 300ms;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
 }
 .explore__btn:hover {
   transform: scale(1.01);
@@ -189,7 +189,7 @@ p {
   padding: 0.3em;
   text-align: center;
   position: relative; /* to show shadow */
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .header__menu {
@@ -197,15 +197,6 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 0.3em 0.3em 0.3em 1em;
-  /*position: relative;
-  &::before {
-      font-family: "Font Awesome 5 Free"; 
-      font-size: 2rem;
-      font-weight: 800;
-      content: "\f060";
-      position: absolute;
-      left: 1.5rem;
-  }*/
 }
 
 .header__title {
@@ -247,7 +238,7 @@ p {
 }
 .nav__element {
   background-color: #F6F6F6;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
   padding-top: 2.6rem;
   padding-bottom: 2.6rem;
@@ -319,7 +310,7 @@ p {
   max-width: 689px;
   height: 251px;
   background-color: #FFFFFF;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   position: relative;
 }
@@ -336,7 +327,7 @@ p {
   top: 1.5rem;
   right: 1.5rem;
   border-radius: 2px;
-  box-shadow: rgba(0, 0, 0, 0.1490196078) rgba(0, 0, 0, 0.1019607843);
+  box-shadow: rgb(0, 0, 0) rgba(0, 0, 0, 0.1);
 }
 .cards .card img {
   width: 100%;

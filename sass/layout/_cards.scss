@@ -42,7 +42,7 @@
         position: relative;
         &__badge::before {     /* badge */
             @include mixins.badge__card;
-            @include mixins.shadow (v.$shadow-color2);
+            @include mixins.shadow (v.$shadow-color, 0.15);
         }
         & img {
             width: 100%;

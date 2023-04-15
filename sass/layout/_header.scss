@@ -5,7 +5,7 @@
     padding: .3em;
     text-align: center;
     position: relative; /* to show shadow */
-    @include mixins.shadow (v.$shadow-size2, v.$shadow-color2);
+    @include mixins.shadow (0 2px 4px 0, v.$shadow-color, 0.15);
 }
 
 .header__menu {
@@ -13,15 +13,6 @@
     align-items: center;
     justify-content: space-between;
     padding: .3em .3em .3em 1em;
-    /*position: relative;
-    &::before {
-        font-family: "Font Awesome 5 Free"; 
-        font-size: 2rem;
-        font-weight: 800;
-        content: "\f060";
-        position: absolute;
-        left: 1.5rem;
-    }*/
 }
   
 .header__title {
