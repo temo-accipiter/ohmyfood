@@ -106,13 +106,15 @@
             content: "\f00C";
             font-family: "Font Awesome 5 Free";
             position: absolute;
-            font-size: 2rem;
+            font-size: 1rem;
+            padding: 0.3rem;
             font-weight: 600;
             border: 1px solid v.$tertiary-color;
             border-radius: 50%;
             color: v.$tertiary-color;
             background-color: #ffffff;
-            right: -6rem;
+            right: -6.3rem;
+            top: -1.2rem;
             z-index: 2;
             transform-origin: right;
             transform: scaleX(1);
