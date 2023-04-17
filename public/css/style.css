@@ -78,13 +78,14 @@ p {
   margin-top: 2.7rem;
   border: transparent;
   border-radius: 25px;
-  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   transition: transform 300ms;
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 .explore__btn:hover {
   transform: scale(1.01);
-  opacity: 0.9;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 .explore__btn--cmd {
   margin: 0 0 2.7rem 0;
@@ -128,9 +129,14 @@ p {
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
   position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.menu__card__title {
-  font-weight: 500;
+.menu__card h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu__card__content {
   display: flex;
@@ -150,7 +156,6 @@ p {
 }
 .menu__card:hover .menu__card__tarif::after {
   content: "";
-  color: #99E2D0;
   position: absolute;
   background-color: #99E2D0;
   height: 69px;
@@ -168,7 +173,7 @@ p {
   font-family: "Font Awesome 5 Free";
   position: absolute;
   font-size: 1rem;
-  padding: 0.3rem;
+  padding: 0.3rem 0.4rem;
   font-weight: 600;
   border: 1px solid #99E2D0;
   border-radius: 50%;
@@ -179,6 +184,14 @@ p {
   z-index: 2;
   transform-origin: right;
   transform: scaleX(1);
+  transition: transform 250ms ease-out;
+}
+.menu__card__text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__card:hover .menu__card__text {
   transition: transform 250ms ease-out;
 }
 
@@ -352,7 +365,7 @@ p {
   max-width: 689px;
   height: 251px;
   background-color: #FFFFFF;
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   position: relative;
 }
@@ -369,7 +382,7 @@ p {
   top: 1.5rem;
   right: 1.5rem;
   border-radius: 2px;
-  box-shadow: rgb(0, 0, 0) rgba(0, 0, 0, 0.1);
+  box-shadow: rgb(0, 0, 0) rgba(0, 0, 0, 0.25);
 }
 .cards .card img {
   width: 100%;
@@ -455,6 +468,83 @@ p {
 }
 .footer__icon {
   margin-right: 0.7rem;
+}
+
+.carte {
+  display: flex;
+  justify-content: space-between;
+  height: 69px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.carte__content {
+  display: flex;
+  flex: 1 0 80%;
+  transition: flex 250ms ease-out;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.carte:hover .carte__content {
+  flex: 0 0 63%;
+}
+.carte__titre, .carte__texte {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.carte__prix {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 250ms ease-out;
+  font-weight: 700;
+  padding-top: 4rem;
+  margin-right: 1.5rem;
+  width: 6rem;
+  justify-content: center;
+}
+.carte:hover .carte__prix {
+  transform: translateX(-3.8rem);
+  transition: transform 250ms ease-out;
+  position: relative;
+}
+.carte:hover .carte__prix::after {
+  content: "";
+  position: absolute;
+  background-color: #99E2D0;
+  height: 69px;
+  width: 100%;
+  left: 5.3rem;
+  top: 0;
+  z-index: 1;
+  transform-origin: right;
+  transform: scaleX(1);
+  transition: transform 250ms ease-out;
+}
+.carte:hover .carte__prix::before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  font-size: 1rem;
+  padding: 0.3rem 0.4rem;
+  font-weight: 600;
+  z-index: 2;
+  border: 1px solid #99E2D0;
+  border-radius: 50%;
+  color: #99E2D0;
+  background-color: #ffffff;
+  right: -2.7rem;
+  top: 2.6rem;
+  transform-origin: right;
+  transform: scaleX(1);
+  transition: transform 250ms ease-out;
 }
 
 /*# sourceMappingURL=style.css.map */
