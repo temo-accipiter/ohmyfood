@@ -1,9 +1,28 @@
-.location {
+@use "../utils/variables" as v; 
+@use "../utils/mixins";
+
+.search {
     display: flex;
-    align-items: center;
     justify-content: center;
-    min-height: 50px;
-    gap: 17px;
-    color: #353535;
     background-color: #EAEAEA;
+    &__location {
+        display: flex;
+        align-items: center;
+        min-height: 50px;
+        gap: 17px;
+        color: #353535;
+        background-color: #EAEAEA;
+        & input {
+            border: none;
+            background-color: #EAEAEA;
+            transition: transform 250ms ease-out;
+            &:focus {
+                outline: none;
+                border-radius: map-get(v.$border, small);
+                border: 1.5px solid #353535;
+                @include mixins.shadow;
+                transform: scale(1.1);
+            }
+        }
+    }
 }
