@@ -70,6 +70,67 @@ p {
   font-weight: 300;
 }
 
+/*@mixin menu__card {
+    display: flex;
+    justify-content: space-between;
+    height: 69px;
+    border-radius: map-get(v.$border, small);
+    background-color: #ffffff;
+    box-shadow: 0px 4px 15px 0px rgba(v.$shadow-color, 0.1);
+    overflow: hidden;
+    &__content {
+        display: flex;
+        flex: 1 0 80%;
+        transition: flex 250ms ease-out;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 1.5rem;
+        overflow: hidden;
+        }
+    &:hover .menu__card__content {
+        flex: 0 0 63%;
+    }
+    &__title, &__description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__price {
+        display: flex;
+        transition: transform 250ms ease-out;
+        font-weight: 700;
+        padding-top: 4rem;
+        margin-right: 1.5rem;
+        width: 6rem;
+        justify-content: center;
+    }
+    &:hover .menu__card__price {
+        transform: translateX(-3.8rem);
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: v.$tertiary-color;
+            height: 69px;
+            width: 100%;
+            left: 5.3rem;
+            top: 0;
+        }
+        &::before {
+            content: "\f00C";
+            font-family: "Font Awesome 5 Free";
+            position: absolute;
+            font-size: 1rem;
+            padding: 0.3rem 0.4rem;
+            z-index: 1;
+            border-radius: 50%;
+            color: v.$tertiary-color;
+            background-color: #ffffff;
+            right: -3rem;
+            top: 2.6rem;
+        } 
+    }
+}*/
 .explore__btn {
   font-size: 1.6rem;
   color: #FFFFFF;
@@ -92,6 +153,67 @@ p {
   width: 186px;
 }
 
+/*@mixin menu__card {
+    display: flex;
+    justify-content: space-between;
+    height: 69px;
+    border-radius: map-get(v.$border, small);
+    background-color: #ffffff;
+    box-shadow: 0px 4px 15px 0px rgba(v.$shadow-color, 0.1);
+    overflow: hidden;
+    &__content {
+        display: flex;
+        flex: 1 0 80%;
+        transition: flex 250ms ease-out;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 1.5rem;
+        overflow: hidden;
+        }
+    &:hover .menu__card__content {
+        flex: 0 0 63%;
+    }
+    &__title, &__description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__price {
+        display: flex;
+        transition: transform 250ms ease-out;
+        font-weight: 700;
+        padding-top: 4rem;
+        margin-right: 1.5rem;
+        width: 6rem;
+        justify-content: center;
+    }
+    &:hover .menu__card__price {
+        transform: translateX(-3.8rem);
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: v.$tertiary-color;
+            height: 69px;
+            width: 100%;
+            left: 5.3rem;
+            top: 0;
+        }
+        &::before {
+            content: "\f00C";
+            font-family: "Font Awesome 5 Free";
+            position: absolute;
+            font-size: 1rem;
+            padding: 0.3rem 0.4rem;
+            z-index: 1;
+            border-radius: 50%;
+            color: v.$tertiary-color;
+            background-color: #ffffff;
+            right: -3rem;
+            top: 2.6rem;
+        } 
+    }
+}*/
 .search {
   display: flex;
   justify-content: center;
@@ -118,6 +240,67 @@ p {
   transform: scale(1.1);
 }
 
+/*@mixin menu__card {
+    display: flex;
+    justify-content: space-between;
+    height: 69px;
+    border-radius: map-get(v.$border, small);
+    background-color: #ffffff;
+    box-shadow: 0px 4px 15px 0px rgba(v.$shadow-color, 0.1);
+    overflow: hidden;
+    &__content {
+        display: flex;
+        flex: 1 0 80%;
+        transition: flex 250ms ease-out;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 1.5rem;
+        overflow: hidden;
+        }
+    &:hover .menu__card__content {
+        flex: 0 0 63%;
+    }
+    &__title, &__description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__price {
+        display: flex;
+        transition: transform 250ms ease-out;
+        font-weight: 700;
+        padding-top: 4rem;
+        margin-right: 1.5rem;
+        width: 6rem;
+        justify-content: center;
+    }
+    &:hover .menu__card__price {
+        transform: translateX(-3.8rem);
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: v.$tertiary-color;
+            height: 69px;
+            width: 100%;
+            left: 5.3rem;
+            top: 0;
+        }
+        &::before {
+            content: "\f00C";
+            font-family: "Font Awesome 5 Free";
+            position: absolute;
+            font-size: 1rem;
+            padding: 0.3rem 0.4rem;
+            z-index: 1;
+            border-radius: 50%;
+            color: v.$tertiary-color;
+            background-color: #ffffff;
+            right: -3rem;
+            top: 2.6rem;
+        } 
+    }
+}*/
 .menu {
   display: flex;
   flex-direction: column;
@@ -166,15 +349,11 @@ p {
   transition: transform 250ms ease-out;
   font-weight: 700;
   padding-top: 4rem;
-  margin-right: 1.5rem;
+  padding-right: 1.5rem;
   width: 6rem;
   justify-content: center;
 }
-.menu__card:hover .menu__card__price {
-  transform: translateX(-3.8rem);
-  position: relative;
-}
-.menu__card:hover .menu__card__price::after {
+.menu__card__price::after {
   content: "";
   position: absolute;
   background-color: #99E2D0;
@@ -183,7 +362,7 @@ p {
   left: 5.3rem;
   top: 0;
 }
-.menu__card:hover .menu__card__price::before {
+.menu__card__price::before {
   content: "\f00c";
   font-family: "Font Awesome 5 Free";
   position: absolute;
@@ -196,7 +375,72 @@ p {
   right: -3rem;
   top: 2.6rem;
 }
+.menu__card:hover .menu__card__price {
+  transform: translateX(-5.3rem);
+  position: relative;
+}
 
+/*@mixin menu__card {
+    display: flex;
+    justify-content: space-between;
+    height: 69px;
+    border-radius: map-get(v.$border, small);
+    background-color: #ffffff;
+    box-shadow: 0px 4px 15px 0px rgba(v.$shadow-color, 0.1);
+    overflow: hidden;
+    &__content {
+        display: flex;
+        flex: 1 0 80%;
+        transition: flex 250ms ease-out;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 1.5rem;
+        overflow: hidden;
+        }
+    &:hover .menu__card__content {
+        flex: 0 0 63%;
+    }
+    &__title, &__description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__price {
+        display: flex;
+        transition: transform 250ms ease-out;
+        font-weight: 700;
+        padding-top: 4rem;
+        margin-right: 1.5rem;
+        width: 6rem;
+        justify-content: center;
+    }
+    &:hover .menu__card__price {
+        transform: translateX(-3.8rem);
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: v.$tertiary-color;
+            height: 69px;
+            width: 100%;
+            left: 5.3rem;
+            top: 0;
+        }
+        &::before {
+            content: "\f00C";
+            font-family: "Font Awesome 5 Free";
+            position: absolute;
+            font-size: 1rem;
+            padding: 0.3rem 0.4rem;
+            z-index: 1;
+            border-radius: 50%;
+            color: v.$tertiary-color;
+            background-color: #ffffff;
+            right: -3rem;
+            top: 2.6rem;
+        } 
+    }
+}*/
 .sections {
   position: relative;
   display: flex;
@@ -242,6 +486,67 @@ p {
   top: 3rem;
 }
 
+/*@mixin menu__card {
+    display: flex;
+    justify-content: space-between;
+    height: 69px;
+    border-radius: map-get(v.$border, small);
+    background-color: #ffffff;
+    box-shadow: 0px 4px 15px 0px rgba(v.$shadow-color, 0.1);
+    overflow: hidden;
+    &__content {
+        display: flex;
+        flex: 1 0 80%;
+        transition: flex 250ms ease-out;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 1.5rem;
+        overflow: hidden;
+        }
+    &:hover .menu__card__content {
+        flex: 0 0 63%;
+    }
+    &__title, &__description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__price {
+        display: flex;
+        transition: transform 250ms ease-out;
+        font-weight: 700;
+        padding-top: 4rem;
+        margin-right: 1.5rem;
+        width: 6rem;
+        justify-content: center;
+    }
+    &:hover .menu__card__price {
+        transform: translateX(-3.8rem);
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: v.$tertiary-color;
+            height: 69px;
+            width: 100%;
+            left: 5.3rem;
+            top: 0;
+        }
+        &::before {
+            content: "\f00C";
+            font-family: "Font Awesome 5 Free";
+            position: absolute;
+            font-size: 1rem;
+            padding: 0.3rem 0.4rem;
+            z-index: 1;
+            border-radius: 50%;
+            color: v.$tertiary-color;
+            background-color: #ffffff;
+            right: -3rem;
+            top: 2.6rem;
+        } 
+    }
+}*/
 .header {
   padding: 0.3em;
   text-align: center;
@@ -266,6 +571,67 @@ p {
   font-size: 2rem;
 }
 
+/*@mixin menu__card {
+    display: flex;
+    justify-content: space-between;
+    height: 69px;
+    border-radius: map-get(v.$border, small);
+    background-color: #ffffff;
+    box-shadow: 0px 4px 15px 0px rgba(v.$shadow-color, 0.1);
+    overflow: hidden;
+    &__content {
+        display: flex;
+        flex: 1 0 80%;
+        transition: flex 250ms ease-out;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 1.5rem;
+        overflow: hidden;
+        }
+    &:hover .menu__card__content {
+        flex: 0 0 63%;
+    }
+    &__title, &__description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__price {
+        display: flex;
+        transition: transform 250ms ease-out;
+        font-weight: 700;
+        padding-top: 4rem;
+        margin-right: 1.5rem;
+        width: 6rem;
+        justify-content: center;
+    }
+    &:hover .menu__card__price {
+        transform: translateX(-3.8rem);
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: v.$tertiary-color;
+            height: 69px;
+            width: 100%;
+            left: 5.3rem;
+            top: 0;
+        }
+        &::before {
+            content: "\f00C";
+            font-family: "Font Awesome 5 Free";
+            position: absolute;
+            font-size: 1rem;
+            padding: 0.3rem 0.4rem;
+            z-index: 1;
+            border-radius: 50%;
+            color: v.$tertiary-color;
+            background-color: #ffffff;
+            right: -3rem;
+            top: 2.6rem;
+        } 
+    }
+}*/
 .nav {
   display: flex;
   flex-direction: column;
@@ -322,6 +688,67 @@ p {
   margin-right: 2rem;
 }
 
+/*@mixin menu__card {
+    display: flex;
+    justify-content: space-between;
+    height: 69px;
+    border-radius: map-get(v.$border, small);
+    background-color: #ffffff;
+    box-shadow: 0px 4px 15px 0px rgba(v.$shadow-color, 0.1);
+    overflow: hidden;
+    &__content {
+        display: flex;
+        flex: 1 0 80%;
+        transition: flex 250ms ease-out;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 1.5rem;
+        overflow: hidden;
+        }
+    &:hover .menu__card__content {
+        flex: 0 0 63%;
+    }
+    &__title, &__description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__price {
+        display: flex;
+        transition: transform 250ms ease-out;
+        font-weight: 700;
+        padding-top: 4rem;
+        margin-right: 1.5rem;
+        width: 6rem;
+        justify-content: center;
+    }
+    &:hover .menu__card__price {
+        transform: translateX(-3.8rem);
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: v.$tertiary-color;
+            height: 69px;
+            width: 100%;
+            left: 5.3rem;
+            top: 0;
+        }
+        &::before {
+            content: "\f00C";
+            font-family: "Font Awesome 5 Free";
+            position: absolute;
+            font-size: 1rem;
+            padding: 0.3rem 0.4rem;
+            z-index: 1;
+            border-radius: 50%;
+            color: v.$tertiary-color;
+            background-color: #ffffff;
+            right: -3rem;
+            top: 2.6rem;
+        } 
+    }
+}*/
 .cards {
   display: flex;
   flex-direction: column;
