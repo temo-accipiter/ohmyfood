@@ -70,67 +70,6 @@ p {
   font-weight: 300;
 }
 
-/*@mixin menu__card {
-    display: flex;
-    justify-content: space-between;
-    height: 69px;
-    border-radius: map-get(v.$border, small);
-    background-color: #ffffff;
-    box-shadow: 0px 4px 15px 0px rgba(v.$shadow-color, 0.1);
-    overflow: hidden;
-    &__content {
-        display: flex;
-        flex: 1 0 80%;
-        transition: flex 250ms ease-out;
-        flex-direction: column;
-        justify-content: space-evenly;
-        margin-left: 1.5rem;
-        overflow: hidden;
-        }
-    &:hover .menu__card__content {
-        flex: 0 0 63%;
-    }
-    &__title, &__description {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    &__price {
-        display: flex;
-        transition: transform 250ms ease-out;
-        font-weight: 700;
-        padding-top: 4rem;
-        margin-right: 1.5rem;
-        width: 6rem;
-        justify-content: center;
-    }
-    &:hover .menu__card__price {
-        transform: translateX(-3.8rem);
-        position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            background-color: v.$tertiary-color;
-            height: 69px;
-            width: 100%;
-            left: 5.3rem;
-            top: 0;
-        }
-        &::before {
-            content: "\f00C";
-            font-family: "Font Awesome 5 Free";
-            position: absolute;
-            font-size: 1rem;
-            padding: 0.3rem 0.4rem;
-            z-index: 1;
-            border-radius: 50%;
-            color: v.$tertiary-color;
-            background-color: #ffffff;
-            right: -3rem;
-            top: 2.6rem;
-        } 
-    }
-}*/
 .explore__btn {
   font-size: 1.6rem;
   color: #FFFFFF;
@@ -153,67 +92,6 @@ p {
   width: 186px;
 }
 
-/*@mixin menu__card {
-    display: flex;
-    justify-content: space-between;
-    height: 69px;
-    border-radius: map-get(v.$border, small);
-    background-color: #ffffff;
-    box-shadow: 0px 4px 15px 0px rgba(v.$shadow-color, 0.1);
-    overflow: hidden;
-    &__content {
-        display: flex;
-        flex: 1 0 80%;
-        transition: flex 250ms ease-out;
-        flex-direction: column;
-        justify-content: space-evenly;
-        margin-left: 1.5rem;
-        overflow: hidden;
-        }
-    &:hover .menu__card__content {
-        flex: 0 0 63%;
-    }
-    &__title, &__description {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    &__price {
-        display: flex;
-        transition: transform 250ms ease-out;
-        font-weight: 700;
-        padding-top: 4rem;
-        margin-right: 1.5rem;
-        width: 6rem;
-        justify-content: center;
-    }
-    &:hover .menu__card__price {
-        transform: translateX(-3.8rem);
-        position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            background-color: v.$tertiary-color;
-            height: 69px;
-            width: 100%;
-            left: 5.3rem;
-            top: 0;
-        }
-        &::before {
-            content: "\f00C";
-            font-family: "Font Awesome 5 Free";
-            position: absolute;
-            font-size: 1rem;
-            padding: 0.3rem 0.4rem;
-            z-index: 1;
-            border-radius: 50%;
-            color: v.$tertiary-color;
-            background-color: #ffffff;
-            right: -3rem;
-            top: 2.6rem;
-        } 
-    }
-}*/
 .search {
   display: flex;
   justify-content: center;
@@ -240,67 +118,6 @@ p {
   transform: scale(1.1);
 }
 
-/*@mixin menu__card {
-    display: flex;
-    justify-content: space-between;
-    height: 69px;
-    border-radius: map-get(v.$border, small);
-    background-color: #ffffff;
-    box-shadow: 0px 4px 15px 0px rgba(v.$shadow-color, 0.1);
-    overflow: hidden;
-    &__content {
-        display: flex;
-        flex: 1 0 80%;
-        transition: flex 250ms ease-out;
-        flex-direction: column;
-        justify-content: space-evenly;
-        margin-left: 1.5rem;
-        overflow: hidden;
-        }
-    &:hover .menu__card__content {
-        flex: 0 0 63%;
-    }
-    &__title, &__description {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    &__price {
-        display: flex;
-        transition: transform 250ms ease-out;
-        font-weight: 700;
-        padding-top: 4rem;
-        margin-right: 1.5rem;
-        width: 6rem;
-        justify-content: center;
-    }
-    &:hover .menu__card__price {
-        transform: translateX(-3.8rem);
-        position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            background-color: v.$tertiary-color;
-            height: 69px;
-            width: 100%;
-            left: 5.3rem;
-            top: 0;
-        }
-        &::before {
-            content: "\f00C";
-            font-family: "Font Awesome 5 Free";
-            position: absolute;
-            font-size: 1rem;
-            padding: 0.3rem 0.4rem;
-            z-index: 1;
-            border-radius: 50%;
-            color: v.$tertiary-color;
-            background-color: #ffffff;
-            right: -3rem;
-            top: 2.6rem;
-        } 
-    }
-}*/
 .menu {
   display: flex;
   flex-direction: column;
@@ -337,7 +154,7 @@ p {
   overflow: hidden;
 }
 .menu__card:hover .menu__card__content {
-  flex: 0 0 63%;
+  flex: 0 0 59%;
 }
 .menu__card__title, .menu__card__description {
   white-space: nowrap;
@@ -349,9 +166,8 @@ p {
   transition: transform 250ms ease-out;
   font-weight: 700;
   padding-top: 4rem;
-  padding-right: 1.5rem;
-  width: 6rem;
-  justify-content: center;
+  width: 5.3rem;
+  position: relative;
 }
 .menu__card__price::after {
   content: "";
@@ -380,67 +196,6 @@ p {
   position: relative;
 }
 
-/*@mixin menu__card {
-    display: flex;
-    justify-content: space-between;
-    height: 69px;
-    border-radius: map-get(v.$border, small);
-    background-color: #ffffff;
-    box-shadow: 0px 4px 15px 0px rgba(v.$shadow-color, 0.1);
-    overflow: hidden;
-    &__content {
-        display: flex;
-        flex: 1 0 80%;
-        transition: flex 250ms ease-out;
-        flex-direction: column;
-        justify-content: space-evenly;
-        margin-left: 1.5rem;
-        overflow: hidden;
-        }
-    &:hover .menu__card__content {
-        flex: 0 0 63%;
-    }
-    &__title, &__description {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    &__price {
-        display: flex;
-        transition: transform 250ms ease-out;
-        font-weight: 700;
-        padding-top: 4rem;
-        margin-right: 1.5rem;
-        width: 6rem;
-        justify-content: center;
-    }
-    &:hover .menu__card__price {
-        transform: translateX(-3.8rem);
-        position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            background-color: v.$tertiary-color;
-            height: 69px;
-            width: 100%;
-            left: 5.3rem;
-            top: 0;
-        }
-        &::before {
-            content: "\f00C";
-            font-family: "Font Awesome 5 Free";
-            position: absolute;
-            font-size: 1rem;
-            padding: 0.3rem 0.4rem;
-            z-index: 1;
-            border-radius: 50%;
-            color: v.$tertiary-color;
-            background-color: #ffffff;
-            right: -3rem;
-            top: 2.6rem;
-        } 
-    }
-}*/
 .sections {
   position: relative;
   display: flex;
@@ -470,12 +225,31 @@ p {
   width: 100%;
   max-width: 1055px;
 }
-.sections__content__title {
+.sections__title {
+  display: flex;
   padding: 1.9rem 0.4rem 0 0.4rem;
   position: relative;
   margin-left: -5rem;
 }
-.sections__content__title::after { /* heart icon */
+.sections__title--size {
+  font-size: 2.5rem;
+}
+.sections__title::before {
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #101010;
+  font-weight: 900;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  right: -7rem;
+  top: 2.6rem;
+}
+.sections__title::after { /* heart icon */
   content: "\f004";
   font-family: "Font Awesome 5 Free";
   position: absolute;
@@ -483,70 +257,9 @@ p {
   font-weight: 500;
   color: #101010;
   right: -4rem;
-  top: 3rem;
+  top: 2.6rem;
 }
 
-/*@mixin menu__card {
-    display: flex;
-    justify-content: space-between;
-    height: 69px;
-    border-radius: map-get(v.$border, small);
-    background-color: #ffffff;
-    box-shadow: 0px 4px 15px 0px rgba(v.$shadow-color, 0.1);
-    overflow: hidden;
-    &__content {
-        display: flex;
-        flex: 1 0 80%;
-        transition: flex 250ms ease-out;
-        flex-direction: column;
-        justify-content: space-evenly;
-        margin-left: 1.5rem;
-        overflow: hidden;
-        }
-    &:hover .menu__card__content {
-        flex: 0 0 63%;
-    }
-    &__title, &__description {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    &__price {
-        display: flex;
-        transition: transform 250ms ease-out;
-        font-weight: 700;
-        padding-top: 4rem;
-        margin-right: 1.5rem;
-        width: 6rem;
-        justify-content: center;
-    }
-    &:hover .menu__card__price {
-        transform: translateX(-3.8rem);
-        position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            background-color: v.$tertiary-color;
-            height: 69px;
-            width: 100%;
-            left: 5.3rem;
-            top: 0;
-        }
-        &::before {
-            content: "\f00C";
-            font-family: "Font Awesome 5 Free";
-            position: absolute;
-            font-size: 1rem;
-            padding: 0.3rem 0.4rem;
-            z-index: 1;
-            border-radius: 50%;
-            color: v.$tertiary-color;
-            background-color: #ffffff;
-            right: -3rem;
-            top: 2.6rem;
-        } 
-    }
-}*/
 .header {
   padding: 0.3em;
   text-align: center;
@@ -571,67 +284,6 @@ p {
   font-size: 2rem;
 }
 
-/*@mixin menu__card {
-    display: flex;
-    justify-content: space-between;
-    height: 69px;
-    border-radius: map-get(v.$border, small);
-    background-color: #ffffff;
-    box-shadow: 0px 4px 15px 0px rgba(v.$shadow-color, 0.1);
-    overflow: hidden;
-    &__content {
-        display: flex;
-        flex: 1 0 80%;
-        transition: flex 250ms ease-out;
-        flex-direction: column;
-        justify-content: space-evenly;
-        margin-left: 1.5rem;
-        overflow: hidden;
-        }
-    &:hover .menu__card__content {
-        flex: 0 0 63%;
-    }
-    &__title, &__description {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    &__price {
-        display: flex;
-        transition: transform 250ms ease-out;
-        font-weight: 700;
-        padding-top: 4rem;
-        margin-right: 1.5rem;
-        width: 6rem;
-        justify-content: center;
-    }
-    &:hover .menu__card__price {
-        transform: translateX(-3.8rem);
-        position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            background-color: v.$tertiary-color;
-            height: 69px;
-            width: 100%;
-            left: 5.3rem;
-            top: 0;
-        }
-        &::before {
-            content: "\f00C";
-            font-family: "Font Awesome 5 Free";
-            position: absolute;
-            font-size: 1rem;
-            padding: 0.3rem 0.4rem;
-            z-index: 1;
-            border-radius: 50%;
-            color: v.$tertiary-color;
-            background-color: #ffffff;
-            right: -3rem;
-            top: 2.6rem;
-        } 
-    }
-}*/
 .nav {
   display: flex;
   flex-direction: column;
@@ -688,67 +340,6 @@ p {
   margin-right: 2rem;
 }
 
-/*@mixin menu__card {
-    display: flex;
-    justify-content: space-between;
-    height: 69px;
-    border-radius: map-get(v.$border, small);
-    background-color: #ffffff;
-    box-shadow: 0px 4px 15px 0px rgba(v.$shadow-color, 0.1);
-    overflow: hidden;
-    &__content {
-        display: flex;
-        flex: 1 0 80%;
-        transition: flex 250ms ease-out;
-        flex-direction: column;
-        justify-content: space-evenly;
-        margin-left: 1.5rem;
-        overflow: hidden;
-        }
-    &:hover .menu__card__content {
-        flex: 0 0 63%;
-    }
-    &__title, &__description {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    &__price {
-        display: flex;
-        transition: transform 250ms ease-out;
-        font-weight: 700;
-        padding-top: 4rem;
-        margin-right: 1.5rem;
-        width: 6rem;
-        justify-content: center;
-    }
-    &:hover .menu__card__price {
-        transform: translateX(-3.8rem);
-        position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            background-color: v.$tertiary-color;
-            height: 69px;
-            width: 100%;
-            left: 5.3rem;
-            top: 0;
-        }
-        &::before {
-            content: "\f00C";
-            font-family: "Font Awesome 5 Free";
-            position: absolute;
-            font-size: 1rem;
-            padding: 0.3rem 0.4rem;
-            z-index: 1;
-            border-radius: 50%;
-            color: v.$tertiary-color;
-            background-color: #ffffff;
-            right: -3rem;
-            top: 2.6rem;
-        } 
-    }
-}*/
 .cards {
   display: flex;
   flex-direction: column;
@@ -825,6 +416,21 @@ p {
   padding: 1.2rem 0 1.2rem 1.3rem;
   position: relative;
 }
+.cards .card__content::before {
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #101010;
+  font-weight: 900;
+  background: linear-gradient(193.33deg, rgba(147, 86, 220, 0) -11.44%, rgba(255, 121, 218, 0) 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  right: 3rem;
+  top: 2rem;
+}
 .cards .card__content::after { /* heart icon */
   content: "\f004";
   font-family: "Font Awesome 5 Free";
@@ -832,7 +438,8 @@ p {
   font-size: 2rem;
   font-weight: 500;
   color: #101010;
-  right: 2rem;
+  opacity: 1;
+  right: 3rem;
   top: 2rem;
 }
 .cards .card__title {

@@ -55,9 +55,20 @@
             flex-direction: column;
             padding: 1.2rem 0 1.2rem 1.3rem;
             position: relative;
+            &::before {
+                @include mixins.icon__heart;
+                font-weight: 900;
+                background: linear-gradient(193.33deg, rgba(147, 86, 220, 0) -11.44%, rgba(255, 121, 218, 0) 123.93%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                right: 3rem;
+                top: 2rem;        
+            }
             &::after {        /* heart icon */
                 @include mixins.icon__heart;
-                right: 2rem;
+                opacity: 1;
+                right: 3rem;
                 top: 2rem;
             }
         }
