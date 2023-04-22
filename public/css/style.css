@@ -78,13 +78,14 @@ p {
   margin-top: 2.7rem;
   border: transparent;
   border-radius: 25px;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, rgb(147, 86, 220) -11.44%, rgb(255, 121, 218) 123.93%);
   transition: all 250ms ease-out;
+  cursor: pointer;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 .explore__btn:hover {
   transform: scale(1.01);
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  background: linear-gradient(200.64deg, rgb(147, 86, 220) -5.2%, rgb(255, 121, 218) 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 .explore__btn--cmd {
@@ -227,37 +228,35 @@ p {
 }
 .sections__title {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
   padding: 1.9rem 0.4rem 0 0.4rem;
-  position: relative;
-  margin-left: -5rem;
 }
 .sections__title--size {
   font-size: 2.5rem;
 }
-.sections__title::before {
+.sections__icon:checked + label i {
+  color: transparent;
+  position: relative;
+}
+.sections__icon:checked + label i::after {
   content: "\f004";
   font-family: "Font Awesome 5 Free";
   position: absolute;
-  font-size: 2rem;
-  font-weight: 500;
-  color: #101010;
   font-weight: 900;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, rgb(147, 86, 220) -11.44%, rgb(255, 121, 218) 123.93%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  right: -7rem;
-  top: 2.6rem;
-}
-.sections__title::after { /* heart icon */
-  content: "\f004";
-  font-family: "Font Awesome 5 Free";
   position: absolute;
+  right: 0;
+}
+.sections .fa-heart {
   font-size: 2rem;
-  font-weight: 500;
-  color: #101010;
-  right: -4rem;
-  top: 2.6rem;
+}
+.sections #my-checkbox {
+  display: none;
 }
 
 .header {
@@ -373,11 +372,39 @@ p {
 }
 .cards__link {
   display: block;
+  position: relative;
 }
 @media (min-width: 730px) {
   .cards__link {
     flex-basis: 47%;
   }
+}
+.cards__link__checkbox {
+  position: absolute;
+  right: 2rem;
+  top: 20rem;
+}
+.cards__link__icon:checked + label i {
+  color: transparent;
+  position: relative;
+}
+.cards__link__icon:checked + label i::after {
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  font-weight: 900;
+  background: linear-gradient(193.33deg, rgb(147, 86, 220) -11.44%, rgb(255, 121, 218) 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: absolute;
+  right: 0;
+}
+.cards__link .fa-heart {
+  font-size: 2rem;
+}
+.cards__link #my-checkbox1, .cards__link #my-checkbox2, .cards__link #my-checkbox3, .cards__link #my-checkbox4 {
+  display: none;
 }
 .cards .card {
   display: flex;
@@ -388,6 +415,7 @@ p {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   position: relative;
+  cursor: pointer;
 }
 .cards .card__badge::before { /* badge */
   content: "Nouveau";
@@ -415,32 +443,6 @@ p {
   flex-direction: column;
   padding: 1.2rem 0 1.2rem 1.3rem;
   position: relative;
-}
-.cards .card__content::before {
-  content: "\f004";
-  font-family: "Font Awesome 5 Free";
-  position: absolute;
-  font-size: 2rem;
-  font-weight: 500;
-  color: #101010;
-  font-weight: 900;
-  background: linear-gradient(193.33deg, rgba(147, 86, 220, 0) -11.44%, rgba(255, 121, 218, 0) 123.93%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  right: 3rem;
-  top: 2rem;
-}
-.cards .card__content::after { /* heart icon */
-  content: "\f004";
-  font-family: "Font Awesome 5 Free";
-  position: absolute;
-  font-size: 2rem;
-  font-weight: 500;
-  color: #101010;
-  opacity: 1;
-  right: 3rem;
-  top: 2rem;
 }
 .cards .card__title {
   margin-top: 0;

@@ -4,15 +4,6 @@
     box-shadow: $size rgba(v.$shadow-color, $opacity);
 }
 
-@mixin icon__heart {
-    content: "\f004";
-    font-family: "Font Awesome 5 Free";
-    position: absolute;
-    font-size: 2rem;
-    font-weight: 500;
-    color: #101010;
-}
-
 @mixin badge__card {
     content: "Nouveau";
     color: #008766;
@@ -44,8 +35,9 @@
     margin-top: 2.7rem;
     border: transparent;
     border-radius: map-get(v.$border, large);
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    background: v.$bg-gradient;
     transition: all 250ms ease-out;   
+    cursor: pointer;
 }
 
 @mixin incrementation {
@@ -117,5 +109,22 @@
     &:hover .menu__card__price {
         transform: translateX(-5.3rem);
         position: relative;
+    }
+}
+
+@mixin icon__heart {
+    color: transparent;
+    position: relative;
+    &::after {
+        content: "\f004";
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        font-weight: 900;
+        background: v.$bg-gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        position: absolute;
+        right: 0;
     }
 }
