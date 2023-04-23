@@ -28,23 +28,14 @@
     &__link {
         display: block;
         position: relative;
-        @media (min-width: v.$medium) {
-            flex-basis: 47%;
-            }
-        &__checkbox {
-            position: absolute;
+        @include mixins.heart;
+        & label {
             right: 2rem;
             top: 20rem;
         }
-        &__icon:checked + label i {
-            @include mixins.icon__heart;
-            }    
-        & .fa-heart {
-            font-size: 2rem;
+        @media (min-width: v.$medium) {
+            flex-basis: 47%;
             }
-        & #my-checkbox1, #my-checkbox2, #my-checkbox3, #my-checkbox4 {
-            display: none;
-            }    
         }
     & .card {
         display: flex;

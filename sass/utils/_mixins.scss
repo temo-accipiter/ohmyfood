@@ -112,19 +112,28 @@
     }
 }
 
-@mixin icon__heart {
-    color: transparent;
-    position: relative;
-    &::after {
-        content: "\f004";
-        font-family: "Font Awesome 5 Free";
+@mixin heart {
+    input[type="checkbox"] {
+        display: none;
+    }
+    label {
         position: absolute;
-        font-weight: 900;
-        background: v.$bg-gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        position: absolute;
-        right: 0;
+        font-size: 2rem;
+        &::before {
+            content: "\f004";
+            font-family: "Font Awesome 5 Free";
+            position: absolute;
+            font-weight: 900;
+            opacity: 0;
+            background: v.$bg-gradient;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            right: 0;
+            transition: all 250ms ease-out;
+        }
+    }
+    input[type="checkbox"]:checked + label::before {
+        opacity: 1;
     }
 }

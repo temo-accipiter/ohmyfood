@@ -29,23 +29,16 @@
         max-width: 1055px;
     }
     &__title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 2rem;
-        padding: 1.9rem 0.4rem 0 0.4rem;
+        position: relative;
+        padding: 1.9rem 3rem 0 0.4rem;
+        @include mixins.heart;
         &--size {
             font-size: 2.5rem;
         }
-    }
-    &__icon:checked + label i {
-        @include mixins.icon__heart;
-    }    
-    & .fa-heart {
-        font-size: 2rem;
-    }
-    & #my-checkbox {
-        display: none;
+        & label {
+            right: -0.5rem;
+            top: 2.5rem;
+        }
     }
 }
 

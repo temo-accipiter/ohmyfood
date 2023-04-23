@@ -227,36 +227,38 @@ p {
   max-width: 1055px;
 }
 .sections__title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  padding: 1.9rem 0.4rem 0 0.4rem;
-}
-.sections__title--size {
-  font-size: 2.5rem;
-}
-.sections__icon:checked + label i {
-  color: transparent;
   position: relative;
+  padding: 1.9rem 3rem 0 0.4rem;
 }
-.sections__icon:checked + label i::after {
+.sections__title input[type=checkbox] {
+  display: none;
+}
+.sections__title label {
+  position: absolute;
+  font-size: 2rem;
+}
+.sections__title label::before {
   content: "\f004";
   font-family: "Font Awesome 5 Free";
   position: absolute;
   font-weight: 900;
+  opacity: 0;
   background: linear-gradient(193.33deg, rgb(147, 86, 220) -11.44%, rgb(255, 121, 218) 123.93%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  position: absolute;
   right: 0;
+  transition: all 250ms ease-out;
 }
-.sections .fa-heart {
-  font-size: 2rem;
+.sections__title input[type=checkbox]:checked + label::before {
+  opacity: 1;
 }
-.sections #my-checkbox {
-  display: none;
+.sections__title--size {
+  font-size: 2.5rem;
+}
+.sections__title label {
+  right: -0.5rem;
+  top: 2.5rem;
 }
 
 .header {
@@ -374,37 +376,37 @@ p {
   display: block;
   position: relative;
 }
-@media (min-width: 730px) {
-  .cards__link {
-    flex-basis: 47%;
-  }
+.cards__link input[type=checkbox] {
+  display: none;
 }
-.cards__link__checkbox {
+.cards__link label {
   position: absolute;
-  right: 2rem;
-  top: 20rem;
+  font-size: 2rem;
 }
-.cards__link__icon:checked + label i {
-  color: transparent;
-  position: relative;
-}
-.cards__link__icon:checked + label i::after {
+.cards__link label::before {
   content: "\f004";
   font-family: "Font Awesome 5 Free";
   position: absolute;
   font-weight: 900;
+  opacity: 0;
   background: linear-gradient(193.33deg, rgb(147, 86, 220) -11.44%, rgb(255, 121, 218) 123.93%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  position: absolute;
   right: 0;
+  transition: all 250ms ease-out;
 }
-.cards__link .fa-heart {
-  font-size: 2rem;
+.cards__link input[type=checkbox]:checked + label::before {
+  opacity: 1;
 }
-.cards__link #my-checkbox1, .cards__link #my-checkbox2, .cards__link #my-checkbox3, .cards__link #my-checkbox4 {
-  display: none;
+.cards__link label {
+  right: 2rem;
+  top: 20rem;
+}
+@media (min-width: 730px) {
+  .cards__link {
+    flex-basis: 47%;
+  }
 }
 .cards .card {
   display: flex;
