@@ -27,7 +27,7 @@
     width: 4rem;
 }
 
-@mixin button {
+@mixin btn {
     font-size: 1.6rem;
     color: #FFFFFF;
     width: 218px;
@@ -36,8 +36,32 @@
     border: transparent;
     border-radius: map-get(v.$border, large);
     background: v.$bg-gradient;
-    transition: all 250ms ease-out;   
+    position: relative;
+    z-index: 1;
     cursor: pointer;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    &:hover::after {
+        opacity: 1;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: map-get(v.$border, large);
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+        background: linear-gradient(200.64deg, lighten(#9356DC, 2) -5.2%, lighten(#FF79DA, 3) 110.74%),
+                    linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms ease-out;
+    }
+    &--cmd {
+        margin: 0 0 2.7rem 0;
+        width: 186px;
+    }
 }
 
 @mixin incrementation {
@@ -119,7 +143,7 @@
     label {
         position: absolute;
         font-size: 2rem;
-        &::before {
+        &::after {
             content: "\f004";
             font-family: "Font Awesome 5 Free";
             position: absolute;
@@ -133,7 +157,11 @@
             transition: all 250ms ease-out;
         }
     }
-    input[type="checkbox"]:checked + label::before {
+    /*input[type="checkbox"]:checked + label {
+        transform: scale(0.9);
+    }*/
+    input[type="checkbox"]:checked + label::after {
         opacity: 1;
+        /*transform: scale(1.1);*/
     }
 }

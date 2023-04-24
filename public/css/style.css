@@ -79,14 +79,27 @@ p {
   border: transparent;
   border-radius: 25px;
   background: linear-gradient(193.33deg, rgb(147, 86, 220) -11.44%, rgb(255, 121, 218) 123.93%);
-  transition: all 250ms ease-out;
+  position: relative;
+  z-index: 1;
   cursor: pointer;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
-.explore__btn:hover {
-  transform: scale(1.01);
-  background: linear-gradient(200.64deg, rgb(147, 86, 220) -5.2%, rgb(255, 121, 218) 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+.explore__btn:hover::after {
+  opacity: 1;
+}
+.explore__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 25px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  background: linear-gradient(200.64deg, #985ede -5.2%, #ff88de 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms ease-out;
 }
 .explore__btn--cmd {
   margin: 0 0 2.7rem 0;
@@ -229,6 +242,9 @@ p {
 .sections__title {
   position: relative;
   padding: 1.9rem 3rem 0 0.4rem;
+  /*input[type="checkbox"]:checked + label {
+      transform: scale(0.9);
+  }*/
 }
 .sections__title input[type=checkbox] {
   display: none;
@@ -237,7 +253,7 @@ p {
   position: absolute;
   font-size: 2rem;
 }
-.sections__title label::before {
+.sections__title label::after {
   content: "\f004";
   font-family: "Font Awesome 5 Free";
   position: absolute;
@@ -250,8 +266,9 @@ p {
   right: 0;
   transition: all 250ms ease-out;
 }
-.sections__title input[type=checkbox]:checked + label::before {
+.sections__title input[type=checkbox]:checked + label::after {
   opacity: 1;
+  /*transform: scale(1.1);*/
 }
 .sections__title--size {
   font-size: 2.5rem;
@@ -375,6 +392,9 @@ p {
 .cards__link {
   display: block;
   position: relative;
+  /*input[type="checkbox"]:checked + label {
+      transform: scale(0.9);
+  }*/
 }
 .cards__link input[type=checkbox] {
   display: none;
@@ -383,7 +403,7 @@ p {
   position: absolute;
   font-size: 2rem;
 }
-.cards__link label::before {
+.cards__link label::after {
   content: "\f004";
   font-family: "Font Awesome 5 Free";
   position: absolute;
@@ -396,8 +416,9 @@ p {
   right: 0;
   transition: all 250ms ease-out;
 }
-.cards__link input[type=checkbox]:checked + label::before {
+.cards__link input[type=checkbox]:checked + label::after {
   opacity: 1;
+  /*transform: scale(1.1);*/
 }
 .cards__link label {
   right: 2rem;
@@ -508,6 +529,42 @@ p {
 }
 .footer__icon {
   margin-right: 0.7rem;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+}
+.loader__element {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 6px solid;
+  border-color: #dbdcef;
+  border-right-color: #474bff;
+  background: linear-gradient(193.33deg, rgb(147, 86, 220) -11.44%, rgb(255, 121, 218) 123.93%);
+  position: relative;
+  animation: spinner 1s infinite ease-out;
+}
+.loader__element::after {
+  width: 80px;
+  height: 80px;
+  top: 1rem;
+  right: 1rem;
+  left: 1rem;
+  bottom: 1rem;
+  position: absolute;
+  border-radius: 50%;
+  border: 6px solid;
+  border-color: #dbdcef;
+  border-right-color: #474bff;
+  animation: spinner 1s infinite ease-out;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -2,16 +2,5 @@
 @use "../utils/mixins";
 
 .explore__btn {
-    @include mixins.button;
-    @include mixins.shadow;
-    &:hover {
-        transform: scale(1.01);
-        background: linear-gradient(200.64deg, rgba(147, 86, 220, 1) -5.2%, rgba(255, 121, 218, 1) 110.74%), 
-                    linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-    }
-    &--cmd {
-        margin: 0 0 2.7rem 0;
-        width: 186px;
-    }
+    @include mixins.btn;
 }
