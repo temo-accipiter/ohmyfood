@@ -1,0 +1,51 @@
+@use "../utils/variables" as v;
+@use "../utils/mixins";
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    margin-top: 200px;
+    & p {
+        font-size: 20px;
+        font-weight: 900;
+        text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+        margin-left: 15px;
+        background: v.$bg-gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    &__element {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: map-get(v.$border , small)-9px solid;
+        border-color: v.$secondary-color;
+        border-right-color: v.$tertiary-color;
+        position: relative;
+        margin: 5rem;
+        @include mixins.shadow (0 5px 10px 0, v.$shadow-color, 0.35);
+        animation: spinner 1s infinite ease-out;
+        &::after {
+            content: "";
+            width: 60px;
+            height: 60px;
+            top: -21px;
+            right: -21px;
+            position: absolute;
+            border-radius: 50%;
+            border: map-get(v.$border, small)-5px solid;
+            border-color: v.$primary-color #FFFFFF;
+            @include mixins.shadow (0 5px 10px 0, v.$shadow-color, 0.35);
+        }
+    }
+    & span {
+        clip-path: inset(0 100% 0 0);
+        animation: dots 1.5s steps(4) infinite;
+    }
+ }

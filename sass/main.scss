@@ -1,5 +1,7 @@
 @import "./base/base";
 @import "./base/typography";
+@import "./components/animations/keyframes";
+@import "./components/loader";
 @import "./components/title";
 @import "./components/buttons";
 @import "./components/location";
@@ -9,44 +11,8 @@
 @import "./layout/nav";
 @import "./layout/cards";
 @import "./layout/footer";
+ 
 
-.loader {
-    display: flex;
-    justify-content: center;
-    &__element {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        border: 6px solid;
-        border-color: #dbdcef;
-        border-right-color: #474bff;
-        background: linear-gradient(193.33deg, rgba(147, 86, 220, 1) -11.44%, rgba(255, 121, 218, 1) 123.93%);
-        position: relative;
-        animation: spinner 1s infinite ease-out;
-        &::after {
-            width: 80px;
-            height: 80px;
-            top: 1rem;
-            right: 1rem;
-            left: 1rem;
-            bottom: 1rem;
-            position: absolute;
-            border-radius: 50%;
-            border: 6px solid;
-            border-color: #dbdcef;
-            border-right-color: #474bff;
-            animation: spinner 1s infinite ease-out;
-        }
-    }
- }
- 
-@keyframes spinner {
-    to {
-       transform: rotate(1turn);
-    }
- }
- 
- 
 
 
 
