@@ -8,11 +8,8 @@ html {
   font-size: 62.5%; /* equivalent of 10px on the root element */
 }
 
-.main-container {
-  width: 100%;
-  /*@media (min-width: v.$breakpoint) {
-     width: 1440px;
-  }*/
+.body__container {
+  position: relative;
 }
 
 body {
@@ -58,9 +55,11 @@ p {
   font-weight: 300;
 }
 
+.body__container {
+  width: 100%;
+}
+
 .main__container {
-  position: absolute;
-  right: 0;
   width: 100%;
   animation: container 1ms 2s backwards;
   /*@media (min-width: v.$desktop) {
@@ -73,17 +72,17 @@ p {
     transform: rotate(1turn);
   }
 }
+@keyframes container {
+  from {
+    transform: translateX(-9999px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 @keyframes dots {
   to {
     clip-path: inset(0 -34% 0 0);
-  }
-}
-@keyframes container {
-  0% {
-    transform: translateX(-9999px);
-  }
-  100% {
-    transform: translateX(0);
   }
 }
 .loader {
@@ -94,25 +93,24 @@ p {
   left: 0;
   right: 0;
   z-index: -1;
-  margin-top: 200px;
+  margin-top: 20vh;
 }
 .loader p {
-  font-size: 20px;
-  font-weight: 900;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
   text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
   margin-left: 15px;
-  background: linear-gradient(193.33deg, rgb(147, 86, 220) -11.44%, rgb(255, 121, 218) 123.93%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  color: #9356DC;
 }
 .loader__element {
   width: 30px;
   height: 30px;
-  border-radius: 50%;
   border: 6px solid;
   border-color: #FF79DA;
   border-right-color: #99E2D0;
+  border-left-color: #99E2D0;
   position: relative;
   margin: 5rem;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.35);

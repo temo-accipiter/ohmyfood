@@ -9,24 +9,23 @@
     left: 0;
     right: 0;
     z-index: -1;
-    margin-top: 200px;
+    margin-top: 20vh;
     & p {
-        font-size: 20px;
-        font-weight: 900;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        font-weight: bold;
         text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
         margin-left: 15px;
-        background: v.$bg-gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
+        color: v.$primary-color;
     }
     &__element {
         width: 30px;
         height: 30px;
-        border-radius: 50%;
         border: map-get(v.$border , small)-9px solid;
         border-color: v.$secondary-color;
         border-right-color: v.$tertiary-color;
+        border-left-color: v.$tertiary-color;
         position: relative;
         margin: 5rem;
         @include mixins.shadow (0 5px 10px 0, v.$shadow-color, 0.35);

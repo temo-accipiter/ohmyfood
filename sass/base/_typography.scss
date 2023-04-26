@@ -44,9 +44,11 @@ p {
     font-weight: 300;
 }
 
+.body__container {
+    width: 100%;
+}
+
 .main__container {
-    position: absolute;
-    right: 0;
     width: 100%;
     animation: container 1ms 2s backwards;
     /*@media (min-width: v.$desktop) {

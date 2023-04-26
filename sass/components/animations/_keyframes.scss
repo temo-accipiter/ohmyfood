@@ -3,18 +3,19 @@
        transform: rotate(1turn);
     }
  }
- @keyframes dots {
-    to {
-       clip-path: inset(0 -34% 0 0);
-    }
- }
- 
 
- @keyframes container {
-    0% {
-        transform: translateX(-9999px);
-    }
-    100% {
-        transform: translateX(0);
-    }
- }
+@keyframes container {
+   from {
+      transform: translateX(-9999px);
+   }
+   to {
+      transform: translateX(0);
+   }
+}
+
+@keyframes dots {
+   to {
+      clip-path: inset(0 -34% 0 0);
+   }
+}
+ 
