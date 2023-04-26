@@ -13,8 +13,6 @@ html {
 }
 
 body {
-  display: flex;
-  justify-content: center;
   font-family: "roboto", sans-serif;
   font-size: 1.6em; /* base size for all elements 16px equivalent */
   font-weight: 500;
@@ -83,6 +81,14 @@ p {
 @keyframes dots {
   to {
     clip-path: inset(0 -34% 0 0);
+  }
+}
+@keyframes menu-card {
+  from {
+    transform: scalex(0.5);
+  }
+  to {
+    transform: scalex(1);
   }
 }
 .loader {
@@ -232,6 +238,7 @@ p {
   background-color: #ffffff;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  animation: menu-card 1s;
 }
 .menu__card__content {
   display: flex;

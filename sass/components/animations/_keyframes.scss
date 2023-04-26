@@ -18,4 +18,13 @@
       clip-path: inset(0 -34% 0 0);
    }
 }
+
+@keyframes menu-card {
+   from {
+       transform: scalex(0.5);
+   }
+   to {
+       transform: scalex(1.0);
+   }
+}
  
