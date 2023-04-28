@@ -60,9 +60,6 @@ p {
 .main__container {
   width: 100%;
   animation: container 1ms 2s backwards;
-  /*@media (min-width: v.$desktop) {
-     width: 1440px;
-  }*/
 }
 
 @keyframes spinner {
@@ -85,9 +82,11 @@ p {
 }
 @keyframes menu-card {
   from {
-    transform: scalex(0.5);
+    transform-origin: left;
+    transform: scalex(0);
   }
   to {
+    transform-origin: left;
     transform: scalex(1);
   }
 }
@@ -198,17 +197,17 @@ p {
   min-height: 50px;
   gap: 17px;
   color: #353535;
-  background-color: #EAEAEA;
 }
 .search__location input {
   border: none;
+  width: 100px;
   background-color: #EAEAEA;
   transition: transform 250ms ease-out;
 }
 .search__location input:focus {
   outline: none;
   border-radius: 15px;
-  border: 1.5px solid #353535;
+  border: 0.5px solid #353535;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   transform: scale(1.1);
 }
@@ -238,7 +237,34 @@ p {
   background-color: #ffffff;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  animation: menu-card 1s;
+  animation: menu-card 1800ms backwards;
+}
+.menu__card--1 {
+  animation-delay: 200ms;
+}
+.menu__card--2 {
+  animation-delay: 400ms;
+}
+.menu__card--3 {
+  animation-delay: 600ms;
+}
+.menu__card--4 {
+  animation-delay: 800ms;
+}
+.menu__card--5 {
+  animation-delay: 1000ms;
+}
+.menu__card--6 {
+  animation-delay: 1200ms;
+}
+.menu__card--7 {
+  animation-delay: 1400ms;
+}
+.menu__card--8 {
+  animation-delay: 1600ms;
+}
+.menu__card--9 {
+  animation-delay: 1800ms;
 }
 .menu__card__content {
   display: flex;
@@ -291,6 +317,10 @@ p {
   transform: translateX(-5.3rem);
   position: relative;
 }
+.menu__card--10 {
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
 
 .sections {
   position: relative;
@@ -324,9 +354,6 @@ p {
 .sections__title {
   position: relative;
   padding: 1.9rem 3rem 0 0.4rem;
-  /*input[type="checkbox"]:checked + label {
-      transform: scale(0.9);
-  }*/
 }
 .sections__title input[type=checkbox] {
   display: none;
@@ -350,7 +377,6 @@ p {
 }
 .sections__title input[type=checkbox]:checked + label::after {
   opacity: 1;
-  /*transform: scale(1.1);*/
 }
 .sections__title--size {
   font-size: 2.5rem;
@@ -382,6 +408,10 @@ p {
 .fa-arrow-left {
   font-weight: 600;
   font-size: 2rem;
+  transition: transform 250ms ease-out;
+}
+.fa-arrow-left:hover {
+  transform: scale(1.3);
 }
 
 .nav {
@@ -474,9 +504,6 @@ p {
 .cards__link {
   display: block;
   position: relative;
-  /*input[type="checkbox"]:checked + label {
-      transform: scale(0.9);
-  }*/
 }
 .cards__link input[type=checkbox] {
   display: none;
@@ -500,7 +527,6 @@ p {
 }
 .cards__link input[type=checkbox]:checked + label::after {
   opacity: 1;
-  /*transform: scale(1.1);*/
 }
 .cards__link label {
   right: 2rem;

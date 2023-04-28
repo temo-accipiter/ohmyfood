@@ -11,15 +11,15 @@
         min-height: 50px;
         gap: 17px;
         color: #353535;
-        background-color: #EAEAEA;
         & input {
             border: none;
+            width: 100px;
             background-color: #EAEAEA;
             transition: transform 250ms ease-out;
             &:focus {
                 outline: none;
                 border-radius: map-get(v.$border, small);
-                border: 1.5px solid #353535;
+                border: .5px solid #353535;
                 @include mixins.shadow;
                 transform: scale(1.1);
             }

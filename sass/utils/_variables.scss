@@ -7,3 +7,6 @@ $desktop: 1008px;
 $shadow-color: rgba(0, 0, 0);
 $border: (default: 20px, large: 25px, small: 15px, mixed: 15px 15px 0 0);
 $bg-gradient: linear-gradient(193.33deg, rgba(147, 86, 220, 1) -11.44%, rgba(255, 121, 218, 1) 123.93%);
+$num-card: 9;
+$anim-dur: 1800ms;
+$anim-delay: $anim-dur / $num-card;

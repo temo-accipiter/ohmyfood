@@ -15,5 +15,10 @@
     }
     &__card {
         @include mixins.menu__card;
+        &--10 {
+            animation-delay: 2s;
+            animation-fill-mode: backwards;
+        }
     }
+    
 }

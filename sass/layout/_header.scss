@@ -23,4 +23,8 @@
 .fa-arrow-left {
     font-weight: 600;
     font-size: 2rem;
+    transition: transform 250ms ease-out;
+    &:hover {
+        transform: scale(1.3);
+    }
 }

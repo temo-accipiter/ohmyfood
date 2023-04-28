@@ -83,7 +83,12 @@
     background-color: #ffffff;
     box-shadow: 0px 4px 15px 0px rgba(v.$shadow-color, 0.1);
     overflow: hidden;
-    animation: menu-card 1s;
+    animation: menu-card v.$anim-dur backwards;
+    @for $i from 1 through v.$num-card {
+        &--#{$i} {
+            animation-delay: v.$anim-delay * $i;
+         }
+    }
     &__content {
         display: flex;
         flex: 1 0 80%;
@@ -158,11 +163,7 @@
             transition: all 250ms ease-out;
         }
     }
-    /*input[type="checkbox"]:checked + label {
-        transform: scale(0.9);
-    }*/
     input[type="checkbox"]:checked + label::after {
         opacity: 1;
-        /*transform: scale(1.1);*/
     }
 }
