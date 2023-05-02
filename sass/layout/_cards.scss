@@ -29,10 +29,6 @@
         display: block;
         position: relative;
         @include mixins.heart;
-        & label {
-            right: 2rem;
-            top: 20rem;
-        }
         @media (min-width: v.$medium) {
             flex-basis: 47%;
             }

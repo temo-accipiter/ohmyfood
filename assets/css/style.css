@@ -27,6 +27,7 @@ a {
 h1 {
   font-family: "shrikhand", cursive;
   font-size: 3rem;
+  letter-spacing: 0.1rem;
   margin: 0;
 }
 
@@ -200,7 +201,7 @@ p {
 }
 .search__location input {
   border: none;
-  width: 100px;
+  width: 108px;
   background-color: #EAEAEA;
   transition: transform 250ms ease-out;
 }
@@ -358,32 +359,39 @@ p {
 .sections__title input[type=checkbox] {
   display: none;
 }
-.sections__title label {
-  position: absolute;
-  font-size: 2rem;
-}
-.sections__title label::after {
-  content: "\f004";
-  font-family: "Font Awesome 5 Free";
-  position: absolute;
-  font-weight: 900;
+.sections__title input[type=checkbox]:checked + label i::after {
   opacity: 0;
+}
+.sections__title label i {
   background: linear-gradient(193.33deg, rgb(147, 86, 220) -11.44%, rgb(255, 121, 218) 123.93%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  right: 0;
-  transition: all 250ms ease-out;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 19rem;
+  right: 2.5rem;
 }
-.sections__title input[type=checkbox]:checked + label::after {
+.sections__title label i::after {
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 500;
+  position: absolute;
+  background-color: #ffffff;
+  right: 0;
+  color: #101010;
   opacity: 1;
+  transition: opacity 250ms ease-out;
 }
 .sections__title--size {
   font-size: 2.5rem;
 }
-.sections__title label {
+.sections__title label i {
   right: -0.5rem;
   top: 2.5rem;
+}
+.sections__title label i::after {
+  background-color: #f6f6f6;
 }
 
 .header {
@@ -508,29 +516,29 @@ p {
 .cards__link input[type=checkbox] {
   display: none;
 }
-.cards__link label {
-  position: absolute;
-  font-size: 2rem;
-}
-.cards__link label::after {
-  content: "\f004";
-  font-family: "Font Awesome 5 Free";
-  position: absolute;
-  font-weight: 900;
+.cards__link input[type=checkbox]:checked + label i::after {
   opacity: 0;
+}
+.cards__link label i {
   background: linear-gradient(193.33deg, rgb(147, 86, 220) -11.44%, rgb(255, 121, 218) 123.93%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 19rem;
+  right: 2.5rem;
+}
+.cards__link label i::after {
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 500;
+  position: absolute;
+  background-color: #ffffff;
   right: 0;
-  transition: all 250ms ease-out;
-}
-.cards__link input[type=checkbox]:checked + label::after {
+  color: #101010;
   opacity: 1;
-}
-.cards__link label {
-  right: 2rem;
-  top: 20rem;
+  transition: opacity 250ms ease-out;
 }
 @media (min-width: 730px) {
   .cards__link {
@@ -602,6 +610,7 @@ p {
 .footer__title {
   font-family: "shrikhand";
   font-size: 1.8rem;
+  letter-spacing: 0.1rem;
 }
 @media (min-width: 1008px) {
   .footer__title {

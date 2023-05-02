@@ -145,25 +145,29 @@
 @mixin heart {
     input[type="checkbox"] {
         display: none;
+        &:checked + label i::after {
+            opacity: 0;
+        }
     }
-    label {
+    label i {
+        background: v.$bg-gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 2.5rem;
         position: absolute;
-        font-size: 2rem;
+        top: 19rem;
+        right: 2.5rem;
         &::after {
             content: "\f004";
             font-family: "Font Awesome 5 Free";
+            font-weight: 500;
             position: absolute;
-            font-weight: 900;
-            opacity: 0;
-            background: v.$bg-gradient;
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
+            background-color: #ffffff;
             right: 0;
-            transition: all 250ms ease-out;
+            color: #101010;
+            opacity: 1;
+            transition: opacity 250ms ease-out;
         }
-    }
-    input[type="checkbox"]:checked + label::after {
-        opacity: 1;
     }
 }
