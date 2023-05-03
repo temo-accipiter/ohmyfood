@@ -134,7 +134,7 @@ p {
   border-color: #9356DC #FFFFFF;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.35);
 }
-.loader span {
+.loader span { /* 3 dots after "Chargement" */
   clip-path: inset(0 100% 0 0);
   animation: dots 1.5s steps(4) infinite;
 }
@@ -152,6 +152,7 @@ p {
 }
 
 .explore__btn {
+  /* transition opacity to change button color when hover */
   font-size: 1.6rem;
   color: #FFFFFF;
   width: 218px;
@@ -164,9 +165,6 @@ p {
   z-index: 1;
   cursor: pointer;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-}
-.explore__btn:hover::after {
-  opacity: 1;
 }
 .explore__btn::after {
   content: "";
@@ -181,6 +179,9 @@ p {
   opacity: 0;
   z-index: -1;
   transition: opacity 250ms ease-out;
+}
+.explore__btn:hover::after {
+  opacity: 1;
 }
 .explore__btn--cmd {
   margin: 0 0 2.7rem 0;
@@ -239,6 +240,16 @@ p {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   animation: menu-card 1800ms backwards;
+  /* generates animation delay for each card element */
+  /* generates animation delay for each card element */
+  /* generates animation delay for each card element */
+  /* generates animation delay for each card element */
+  /* generates animation delay for each card element */
+  /* generates animation delay for each card element */
+  /* generates animation delay for each card element */
+  /* generates animation delay for each card element */
+  /* generates animation delay for each card element */
+  /* menu elements will display progressively one after another */
 }
 .menu__card--1 {
   animation-delay: 200ms;
@@ -270,27 +281,27 @@ p {
 .menu__card__content {
   display: flex;
   flex: 1 0 80%;
-  transition: flex 250ms ease-out;
   flex-direction: column;
   justify-content: space-evenly;
   margin-left: 1.5rem;
   overflow: hidden;
+  transition: flex 250ms ease-out;
 }
 .menu__card:hover .menu__card__content {
   flex: 0 0 59%;
 }
-.menu__card__title, .menu__card__description {
-  white-space: nowrap;
+.menu__card__title, .menu__card__description { /* the effects on text when no space to display a full text, while hover */
+  white-space: nowrap; /* text remains in a line */
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; /* 3 dots after in the end of text */
 }
 .menu__card__price {
   display: flex;
-  transition: transform 250ms ease-out;
   font-weight: 700;
   padding-top: 4rem;
   width: 5.3rem;
   position: relative;
+  transition: transform 250ms ease-out;
 }
 .menu__card__price::after {
   content: "";
@@ -345,7 +356,7 @@ p {
   flex-direction: column;
   align-items: center;
   margin-top: 22rem;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   border-radius: 30px 30px 0 0;
   padding: 1.3rem;
   gap: 4rem;
@@ -391,7 +402,8 @@ p {
   top: 2.5rem;
 }
 .sections__title label i::after {
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
+  cursor: pointer;
 }
 
 .header {
@@ -400,26 +412,22 @@ p {
   position: relative; /* to show shadow */
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 }
-
 .header__menu {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0.3em 0.3em 0.3em 1em;
 }
-
-.header__title {
-  flex-grow: 1;
-  text-align: center;
-}
-
-.fa-arrow-left {
+.header__menu .fa-arrow-left {
   font-weight: 600;
   font-size: 2rem;
   transition: transform 250ms ease-out;
 }
-.fa-arrow-left:hover {
+.header__menu .fa-arrow-left:hover {
   transform: scale(1.3);
+}
+.header__title {
+  flex-grow: 1; /* to center only title, without arrow icon */
+  text-align: center;
 }
 
 .nav {
@@ -466,6 +474,7 @@ p {
   color: #FFFFFF;
   position: absolute;
   left: -1rem;
+  /* numbering the nav__bar elements */
 }
 @media (min-width: 1008px) {
   .nav__element {
@@ -542,7 +551,7 @@ p {
 }
 @media (min-width: 730px) {
   .cards__link {
-    flex-basis: 47%;
+    flex-basis: 47%; /* to display 2 cards in a line */
   }
 }
 .cards .card {
@@ -599,7 +608,7 @@ p {
   padding: 1rem 0 3rem 2.5rem;
 }
 @media (min-width: 1008px) {
-  .footer {
+  .footer { /* the elements change display order with media */
     display: flex;
     justify-content: flex-end;
     align-items: center;

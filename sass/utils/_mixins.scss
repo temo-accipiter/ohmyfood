@@ -1,5 +1,53 @@
 @use "../utils/variables" as v;
 
+@mixin loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    margin-top: 20vh;
+    & p {
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        font-weight: bold;
+        text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+        margin-left: 15px;
+        color: v.$primary-color;
+    }
+    &__element {
+        width: 30px;
+        height: 30px;
+        border: map-get(v.$border , small)-9px solid;
+        border-color: v.$secondary-color;
+        border-right-color: v.$tertiary-color;
+        border-left-color: v.$tertiary-color;
+        position: relative;
+        margin: 5rem;
+        @include shadow (0 5px 10px 0, v.$shadow-color, 0.35);
+        animation: spinner 1s infinite ease-out;
+        &::after {
+            content: "";
+            width: 60px;
+            height: 60px;
+            top: -21px;
+            right: -21px;
+            position: absolute;
+            border-radius: 50%;
+            border: map-get(v.$border, small)-5px solid;
+            border-color: v.$primary-color #FFFFFF;
+            @include shadow (0 5px 10px 0, v.$shadow-color, 0.35);
+        }
+    }
+    & span {       /* 3 dots after "Chargement" */
+        clip-path: inset(0 100% 0 0);
+        animation: dots 1.5s steps(4) infinite;
+    }
+ }
+
 @mixin shadow ($size: 0 4px 10px 0, $color: v.$shadow-color, $opacity: 0.25) {
     box-shadow: $size rgba(v.$shadow-color, $opacity);
 }
@@ -11,7 +59,7 @@
     text-align: center;
     padding-top: .6rem;
     position: absolute;
-    background-color: #99E2D0;
+    background-color: v.$tertiary-color;
     height: 29px;
     width: 80px;
     top: 1.5rem;
@@ -27,7 +75,7 @@
     width: 4rem;
 }
 
-@mixin btn {
+@mixin btn {             /* transition opacity to change button color when hover */
     font-size: 1.6rem;
     color: #FFFFFF;
     width: 218px;
@@ -40,9 +88,6 @@
     z-index: 1;
     cursor: pointer;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    &:hover::after {
-        opacity: 1;
-    }
     &::after {
         content: "";
         position: absolute;
@@ -58,13 +103,16 @@
         z-index: -1;
         transition: opacity 250ms ease-out;
     }
+    &:hover::after {
+        opacity: 1;
+    }
     &--cmd {
         margin: 0 0 2.7rem 0;
         width: 186px;
     }
 }
 
-@mixin incrementation {
+@mixin incrementation { 
     counter-increment: liste 1;
     content: counter(liste) " ";
     background-color: v.$primary-color;
@@ -84,7 +132,7 @@
     box-shadow: 0px 4px 15px 0px rgba(v.$shadow-color, 0.1);
     overflow: hidden;
     animation: menu-card v.$anim-dur backwards;
-    @for $i from 1 through v.$num-card {
+    @for $i from 1 through v.$num-card { /* generates animation delay for each card element */
         &--#{$i} {
             animation-delay: v.$anim-delay * $i;
          }
@@ -92,27 +140,27 @@
     &__content {
         display: flex;
         flex: 1 0 80%;
-        transition: flex 250ms ease-out;
         flex-direction: column;
         justify-content: space-evenly;
         margin-left: 1.5rem;
         overflow: hidden;
+        transition: flex 250ms ease-out;
         }
     &:hover .menu__card__content {
         flex: 0 0 59%;
     }
-    &__title, &__description {
-        white-space: nowrap;
+    &__title, &__description {     /* the effects on text when no space to display a full text, while hover */
+        white-space: nowrap;       /* text remains in a line */
         overflow: hidden;
-        text-overflow: ellipsis;
+        text-overflow: ellipsis;   /* 3 dots after in the end of text */
     }
     &__price {
         display: flex;
-        transition: transform 250ms ease-out;
         font-weight: 700;
         padding-top: 4rem;
         width: 5.3rem;
         position: relative;
+        transition: transform 250ms ease-out;
         &::after {
             content: "";
             position: absolute;

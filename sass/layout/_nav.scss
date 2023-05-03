@@ -31,7 +31,7 @@
         padding-bottom: 2.6rem;
         position: relative;
         &::before {
-            @include mixins.incrementation;  
+            @include mixins.incrementation;  /* numbering the nav__bar elements */
         }
         @media (min-width: v.$desktop) {
             width: 322px;

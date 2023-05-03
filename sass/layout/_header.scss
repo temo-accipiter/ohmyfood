@@ -4,27 +4,23 @@
 .header {
     padding: .3em;
     text-align: center;
-    position: relative; /* to show shadow */
+    position: relative;      /* to show shadow */
     @include mixins.shadow (0 2px 4px 0, v.$shadow-color, 0.15);
-}
-
-.header__menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: .3em .3em .3em 1em;
-}
-  
-.header__title {
-    flex-grow: 1;
-    text-align: center;
-  }
-
-.fa-arrow-left {
-    font-weight: 600;
-    font-size: 2rem;
-    transition: transform 250ms ease-out;
-    &:hover {
-        transform: scale(1.3);
+    &__menu {
+        display: flex;
+        align-items: center;
+        padding: .3em .3em .3em 1em;
+        & .fa-arrow-left {
+            font-weight: 600;
+            font-size: 2rem;
+            transition: transform 250ms ease-out;
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+    }
+    &__title {
+        flex-grow: 1;      /* to center only title, without arrow icon */
+        text-align: center;
     }
 }

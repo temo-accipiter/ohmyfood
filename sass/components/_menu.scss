@@ -13,12 +13,11 @@
            @include mixins.underline;
         }
     }
-    &__card {
-        @include mixins.menu__card;
+    &__card {       
+        @include mixins.menu__card;    /* menu elements will display progressively one after another */
         &--10 {
             animation-delay: 2s;
             animation-fill-mode: backwards;
         }
-    }
-    
+    }   
 }

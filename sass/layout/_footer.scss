@@ -4,7 +4,7 @@
     background-color:#353535;
     color: #FFFFFF;
     padding: 1rem 0 3rem 2.5rem;
-    @media (min-width: v.$desktop) {
+    @media (min-width: v.$desktop) { /* the elements change display order with media */
         display: flex;
         justify-content: flex-end;
         align-items: center;
